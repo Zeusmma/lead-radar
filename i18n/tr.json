@@ -1,0 +1,126 @@
+{
+ "services_title": "Neler sunuyoruz",
+ "why_title": "Neden bizi seçmelisiniz",
+ "why": [
+  "Güler yüzlü, deneyimli ekip",
+  "Adil, şeffaf fiyatlar",
+  "Kolay ulaşım: arayın veya WhatsApp'tan yazın"
+ ],
+ "visit": "Bizi ziyaret edin",
+ "services": {
+  "restaurant": [
+   "Her gün taze yemekler",
+   "Aile dostu yemek",
+   "Paket servis ve toplu sipariş"
+  ],
+  "cafe": [
+   "Kahve ve sıcak içecekler",
+   "Kahvaltı ve tatlılar",
+   "Buluşmak için keyifli bir yer"
+  ],
+  "fast_food": [
+   "Hızlı yemekler",
+   "Paket servis",
+   "Günlük fırsatlar"
+  ],
+  "barber": [
+   "Saç kesimi ve şekillendirme",
+   "Sakal tıraşı ve tıraş",
+   "Saç bakımı"
+  ],
+  "beauty": [
+   "Cilt bakımı",
+   "Nail art, makyaj",
+   "Kişisel güzellik bakımı"
+  ],
+  "dentist": [
+   "Kontrol ve diş temizliği",
+   "Dolgu ve tedaviler",
+   "Estetik diş hekimliği"
+  ],
+  "car_repair": [
+   "Diagnostik",
+   "Periyodik bakım ve yağ değişimi",
+   "Garantili onarım"
+  ],
+  "bakery": [
+   "Her sabah taze ekmek",
+   "Kek ve hamur işleri",
+   "Davet ve organizasyon siparişleri"
+  ],
+  "hotel": [
+   "Konforlu odalar",
+   "Kahvaltı",
+   "Güler yüzlü resepsiyon"
+  ],
+  "gym": [
+   "Modern ekipmanlar",
+   "Kişisel antrenörlük",
+   "Esnek üyelikler"
+  ],
+  "florist": [
+   "Taze buketler",
+   "Davet ve etkinlik süslemeleri",
+   "Aynı gün sipariş"
+  ],
+  "clothes": [
+   "Yeni koleksiyonlar",
+   "Herkes için bedenler",
+   "Güler yüzlü danışmanlık"
+  ],
+  "pharmacy": [
+   "İlaçlar ve danışmanlık",
+   "Sağlık ve güzellik ürünleri",
+   "Güler yüzlü eczacılar"
+  ],
+  "vet": [
+   "Kontrol ve aşılar",
+   "Tedavi ve bakım",
+   "Evcil hayvan sahiplerine danışmanlık"
+  ],
+  "car_wash": [
+   "Dış yıkama",
+   "İç temizlik",
+   "Detaylı bakım"
+  ]
+ },
+ "hook_reviews": "{reviews} Google yorumundan {rating}★ puanınızı gördüm. Müşterileriniz sizi belli ki seviyor, ancak yeni kişiler sizi aradığında onlara gösterecek bir web siteniz yok.",
+ "hook_platform": "Şu anda yeni müşteriler sizi yalnızca {platform} üzerinden bulabiliyor. Bu siteler komisyon alıyor ve rakiplerinizi hemen yanınızda gösteriyor; kendi web siteniz müşteriyi sizde tutar.",
+ "hook_instagram": "Instagram'ınız işinizi zaten gösteriyor; basit bir web sitesi bu ziyaretçileri aramalara ve randevulara dönüştürür, ayrıca Google'da daha üstte görünmenize yardımcı olur.",
+ "hook_offer": "Sitenizde şunlar yer alır: {services}, doğrudan arama ve WhatsApp düğmesi, yol tarifi olan bir harita ve çalışma saatleriniz.",
+ "short_reviews": "Google'da {rating}★ ({reviews} yorum) puanınızı gördüm.",
+ "short_platform": "Müşterilerin sizi yalnızca {platform} üzerinden rezerve edebildiğini fark ettim.",
+ "booking": "online rezervasyon",
+ "menu": "menünüz",
+ "cat": {
+  "restaurant": "restoran",
+  "cafe": "kafe",
+  "fast_food": "fast food",
+  "barber": "kuaför",
+  "beauty": "güzellik salonu",
+  "dentist": "diş kliniği",
+  "car_repair": "oto servis",
+  "bakery": "fırın & pastane",
+  "hotel": "otel",
+  "gym": "spor salonu",
+  "florist": "çiçekçi",
+  "clothes": "giyim mağazası",
+  "pharmacy": "eczane",
+  "vet": "veteriner",
+  "car_wash": "oto yıkama"
+ },
+ "hero": "{city} şehrinde güvenilir {cat}",
+ "sub": "Bizi arayın, yol tarifi alın ya da WhatsApp'tan hemen yazın.",
+ "call": "Hemen Ara",
+ "wa": "WhatsApp",
+ "route": "Yol Tarifi",
+ "about": "Hakkımızda",
+ "about_t": "{name}, {city} bölgesinde müşterilerine özenli hizmet sunan bir {cat}dır. Kaliteli hizmet, güler yüz ve uygun fiyat.",
+ "hours": "Çalışma Saatleri",
+ "contact": "İletişim",
+ "demo": "Bu sayfa {name} için hazırlanmış örnek bir tasarımdır.",
+ "subject": "{name} için ücretsiz web sitesi tasarımı",
+ "email": "Merhaba {name} ekibi,\n\nİnternette sizi aradım ama bir web siteniz göremedim. Müşterilerin çoğu önce Google'da arıyor; sitesi olmayan işletmeler bu müşterileri rakiplere kaptırıyor.\n\nSizin için ücretsiz bir örnek tasarım hazırladım (ekte görebilirsiniz): telefon, WhatsApp, yol tarifi, çalışma saatleri, mobil uyumlu.\n\nBeğenirseniz birkaç gün içinde yayına alabilirim{price}. İlgilenmiyorsanız sorun değil, bu mesaja \"hayır\" yazmanız yeterli, bir daha yazmam.\n\nSaygılarımla,\n{sender}\n{contact}",
+ "short": "Merhaba! {name} için ücretsiz bir web sitesi örneği hazırladım (telefon, WhatsApp, yol tarifi, mobil uyumlu). Görmek ister misiniz? İlgilenmiyorsanız sorun değil. — {sender}",
+ "price": ", fiyat {price}"
+}

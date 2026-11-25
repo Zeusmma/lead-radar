@@ -1,0 +1,10 @@
+{
+ "hook_reviews": "I saw your {rating}★ rating from {reviews} Google reviews. Your customers clearly like you, but when new people search for you, there is no website to show them.",
+ "hook_platform": "Right now new customers can only find you through {platform}. Those sites take commission and show your competitors right next to you; your own website keeps the customer with you.",
+ "hook_instagram": "Your Instagram already shows your work; a simple website would turn those visitors into calls and bookings, and it also helps you appear higher on Google.",
+ "hook_offer": "Your site would include: {services}, a direct call and WhatsApp button, a map with directions and your opening hours.",
+ "short_reviews": "I saw your {rating}★ ({reviews} reviews) on Google.",
+ "short_platform": "I noticed customers can only book you via {platform}.",
+ "booking": "online booking",
+ "menu": "your menu"
+}

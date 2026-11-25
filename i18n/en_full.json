@@ -1,0 +1,118 @@
+{
+ "cat": {
+  "restaurant": "restaurant",
+  "cafe": "café",
+  "fast_food": "fast food",
+  "barber": "barber & hair salon",
+  "beauty": "beauty salon",
+  "dentist": "dental clinic",
+  "car_repair": "car repair shop",
+  "bakery": "bakery",
+  "hotel": "hotel",
+  "gym": "gym",
+  "florist": "florist",
+  "clothes": "clothing store",
+  "pharmacy": "pharmacy",
+  "vet": "veterinary clinic",
+  "car_wash": "car wash"
+ },
+ "hero": "Your trusted {cat} in {city}",
+ "sub": "Call us, get directions or message us on WhatsApp.",
+ "call": "Call now",
+ "wa": "WhatsApp",
+ "route": "Directions",
+ "about": "About us",
+ "about_t": "{name} is a {cat} in {city} that takes care of every customer: good service, friendly people and fair prices.",
+ "hours": "Opening hours",
+ "contact": "Contact",
+ "demo": "This page is a sample design made for {name}.",
+ "subject": "A free website design for {name}",
+ "email": "Hello {name} team,\n\nI looked for you online but could not find a website. Most customers search on Google first, and businesses without a site lose them to competitors.\n\nI made a free sample design for you (attached): phone, WhatsApp, directions, opening hours, mobile-friendly.\n\nIf you like it, I can put it online within a few days{price}. If you are not interested, just reply \"no\" and I will not write again.\n\nBest regards,\n{sender}\n{contact}",
+ "short": "Hello! I made a free sample website for {name} (phone, WhatsApp, directions, mobile-friendly). Would you like to see it? No problem if not. — {sender}",
+ "price": " for {price}",
+ "services_title": "What we offer",
+ "why_title": "Why choose us",
+ "why": [
+  "Friendly, experienced team",
+  "Fair, transparent prices",
+  "Easy to reach: call or WhatsApp"
+ ],
+ "visit": "Visit us",
+ "services": {
+  "restaurant": [
+   "Fresh daily dishes",
+   "Family-friendly dining",
+   "Takeaway & group orders"
+  ],
+  "cafe": [
+   "Coffee & hot drinks",
+   "Breakfast & desserts",
+   "Cosy place to meet"
+  ],
+  "fast_food": [
+   "Quick meals",
+   "Takeaway",
+   "Daily offers"
+  ],
+  "barber": [
+   "Haircuts & styling",
+   "Beard trim & shave",
+   "Hair care"
+  ],
+  "beauty": [
+   "Skin care",
+   "Nails & make-up",
+   "Personal beauty care"
+  ],
+  "dentist": [
+   "Check-ups & cleaning",
+   "Fillings & treatments",
+   "Aesthetic dentistry"
+  ],
+  "car_repair": [
+   "Diagnostics",
+   "Maintenance & oil change",
+   "Repairs with warranty"
+  ],
+  "bakery": [
+   "Fresh bread every morning",
+   "Cakes & pastries",
+   "Orders for events"
+  ],
+  "hotel": [
+   "Comfortable rooms",
+   "Breakfast",
+   "Friendly reception"
+  ],
+  "gym": [
+   "Modern equipment",
+   "Personal training",
+   "Flexible memberships"
+  ],
+  "florist": [
+   "Fresh bouquets",
+   "Event decoration",
+   "Same-day orders"
+  ],
+  "clothes": [
+   "New collections",
+   "Sizes for everyone",
+   "Friendly advice"
+  ],
+  "pharmacy": [
+   "Medicines & advice",
+   "Health & beauty products",
+   "Friendly pharmacists"
+  ],
+  "vet": [
+   "Check-ups & vaccines",
+   "Treatment & care",
+   "Advice for pet owners"
+  ],
+  "car_wash": [
+   "Exterior wash",
+   "Interior cleaning",
+   "Detailing"
+  ]
+ }
+}

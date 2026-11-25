@@ -1,0 +1,126 @@
+{
+ "cat": {
+  "restaurant": "restaurant",
+  "cafe": "café",
+  "fast_food": "fastfood",
+  "barber": "kapsalon",
+  "beauty": "schoonheidssalon",
+  "dentist": "tandartspraktijk",
+  "car_repair": "autobedrijf",
+  "bakery": "bakkerij",
+  "hotel": "hotel",
+  "gym": "sportschool",
+  "florist": "bloemist",
+  "clothes": "kledingwinkel",
+  "pharmacy": "apotheek",
+  "vet": "dierenkliniek",
+  "car_wash": "autowasstraat"
+ },
+ "hero": "Uw vertrouwde {cat} in {city}",
+ "sub": "Bel ons, vraag de route of stuur een bericht via WhatsApp.",
+ "call": "Bel nu",
+ "wa": "WhatsApp",
+ "route": "Route",
+ "about": "Over ons",
+ "about_t": "{name} · {cat} in {city}. Wij zorgen voor elke klant: goede service, vriendelijk personeel en eerlijke prijzen.",
+ "hours": "Openingstijden",
+ "contact": "Contact",
+ "demo": "Deze pagina is een voorbeeldontwerp gemaakt voor {name}.",
+ "subject": "Een gratis websiteontwerp voor {name}",
+ "email": "Hallo team van {name},\n\nIk zocht jullie online, maar kon geen website vinden. De meeste klanten zoeken eerst op Google, en bedrijven zonder site verliezen hen aan de concurrentie.\n\nIk heb een gratis voorbeeldontwerp voor jullie gemaakt (bijgevoegd): telefoon, WhatsApp, route, openingstijden, mobielvriendelijk.\n\nAls jullie het mooi vinden, kan ik het binnen een paar dagen online zetten{price}. Geen interesse? Antwoord gewoon \"nee\", dan schrijf ik niet meer.\n\nMet vriendelijke groet,\n{sender}\n{contact}",
+ "short": "Hallo! Ik heb een gratis voorbeeldwebsite gemaakt voor {name} (telefoon, WhatsApp, route, mobielvriendelijk). Willen jullie hem zien? Geen probleem als niet. — {sender}",
+ "price": " voor {price}",
+ "services_title": "Wat wij bieden",
+ "why_title": "Waarom voor ons kiezen",
+ "why": [
+  "Vriendelijk, ervaren team",
+  "Eerlijke, transparante prijzen",
+  "Makkelijk bereikbaar: bel of WhatsApp"
+ ],
+ "visit": "Kom langs",
+ "services": {
+  "restaurant": [
+   "Verse daggerechten",
+   "Gezellig eten met het gezin",
+   "Afhalen & groepsbestellingen"
+  ],
+  "cafe": [
+   "Koffie & warme dranken",
+   "Ontbijt & desserts",
+   "Gezellige plek om af te spreken"
+  ],
+  "fast_food": [
+   "Snel eten",
+   "Afhalen",
+   "Dagelijkse aanbiedingen"
+  ],
+  "barber": [
+   "Knippen & stylen",
+   "Baard trimmen & scheren",
+   "Haarverzorging"
+  ],
+  "beauty": [
+   "Huidverzorging",
+   "Nagels & make-up",
+   "Persoonlijke schoonheidsverzorging"
+  ],
+  "dentist": [
+   "Controle & gebitsreiniging",
+   "Vullingen & behandelingen",
+   "Esthetische tandheelkunde"
+  ],
+  "car_repair": [
+   "Diagnose",
+   "Onderhoud & olie verversen",
+   "Reparaties met garantie"
+  ],
+  "bakery": [
+   "Vers brood elke ochtend",
+   "Taarten & gebak",
+   "Bestellingen voor feesten"
+  ],
+  "hotel": [
+   "Comfortabele kamers",
+   "Ontbijt",
+   "Vriendelijke receptie"
+  ],
+  "gym": [
+   "Moderne apparatuur",
+   "Personal training",
+   "Flexibele lidmaatschappen"
+  ],
+  "florist": [
+   "Verse boeketten",
+   "Decoratie voor evenementen",
+   "Bestellingen dezelfde dag"
+  ],
+  "clothes": [
+   "Nieuwe collecties",
+   "Maten voor iedereen",
+   "Vriendelijk advies"
+  ],
+  "pharmacy": [
+   "Medicijnen & advies",
+   "Gezondheids- & beautyproducten",
+   "Vriendelijke apothekers"
+  ],
+  "vet": [
+   "Controle & vaccinaties",
+   "Behandeling & verzorging",
+   "Advies voor huisdiereneigenaren"
+  ],
+  "car_wash": [
+   "Buitenkant wassen",
+   "Binnenkant reinigen",
+   "Detailing"
+  ]
+ },
+ "hook_reviews": "Ik zag jullie {rating}★-beoordeling uit {reviews} Google-reviews. Klanten zijn duidelijk tevreden, maar nieuwe klanten die jullie zoeken, vinden geen website.",
+ "hook_platform": "Nieuwe klanten vinden jullie nu alleen via {platform}. Die sites rekenen commissie en zetten concurrenten naast je; met een eigen website houd je de klant bij je.",
+ "hook_instagram": "Jullie Instagram laat je werk al zien; een eenvoudige website maakt van die bezoekers telefoontjes en boekingen en helpt je ook hoger in Google.",
+ "hook_offer": "Je site bevat: {services}, een directe bel- en WhatsApp-knop, een kaart met route en je openingstijden.",
+ "short_reviews": "Ik zag jullie {rating}★ ({reviews} reviews) op Google.",
+ "short_platform": "Ik zag dat klanten alleen via {platform} bij jullie kunnen boeken.",
+ "booking": "online boeken",
+ "menu": "je menukaart"
+}

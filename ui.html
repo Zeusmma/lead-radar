@@ -1,0 +1,388 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Lead Radar</title>
+<link rel="icon" href="data:,">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+:root{
+ --bg:#0b0e14;--bg2:#10141c;--pn:#141925;--pn2:#1a2030;--ln:#232a3a;--ln2:#2e3749;
+ --tx:#e8ebf2;--mu:#8a93a8;--mu2:#5f687d;
+ --ac:#10b981;--ac-s:rgba(16,185,129,.14);--in:#6366f1;--in-s:rgba(99,102,241,.16);
+ --am:#f59e0b;--am-s:rgba(245,158,11,.15);--rd:#f43f5e;--rd-s:rgba(244,63,94,.14);--sky:#38bdf8;--sky-s:rgba(56,189,248,.14);
+ --r:12px;--sh:0 10px 30px rgba(0,0,0,.35)}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font:14px/1.45 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter",Segoe UI,sans-serif;background:var(--bg);color:var(--tx);
+ display:grid;grid-template-columns:330px 1fr;-webkit-font-smoothing:antialiased}
+::selection{background:var(--in-s)}
+a{color:#a5b4fc;text-decoration:none}
+:focus-visible{outline:2px solid var(--in);outline-offset:2px}
+
+/* ---------- sidebar ---------- */
+#side{background:linear-gradient(180deg,var(--bg2),var(--bg));border-right:1px solid var(--ln);display:flex;flex-direction:column;min-height:0;height:100vh}
+.brand{display:flex;align-items:center;gap:12px;padding:20px 20px 14px}
+.logo{width:38px;height:38px;border-radius:11px;background:radial-gradient(circle at 30% 30%,#34d399,#059669 60%,#064e3b);display:grid;place-items:center;box-shadow:0 6px 18px rgba(16,185,129,.35)}
+.brand b{font-size:16px;letter-spacing:-.01em;display:block}.brand span{font-size:12px;color:var(--mu)}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:0 16px 6px;padding:4px;background:var(--pn);border:1px solid var(--ln);border-radius:11px}
+.tabs button{background:none;color:var(--mu);padding:7px 4px;font-size:12.5px;font-weight:600;border-radius:8px}
+.tabs button.on{background:var(--pn2);color:var(--tx);box-shadow:0 1px 0 var(--ln2) inset}
+.panes{overflow:auto;padding:8px 16px 24px;flex:1}
+.pane{display:none}.pane.on{display:block;animation:fade .18s ease}
+@keyframes fade{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.card{background:var(--pn);border:1px solid var(--ln);border-radius:var(--r);padding:14px;margin-top:10px}
+.card h4{margin:0 0 4px;font-size:13.5px}.hint{color:var(--mu);font-size:12.5px;margin:0 0 6px}
+label{display:block;font-size:12px;color:var(--mu);margin:10px 0 5px;font-weight:500}
+select,input,textarea{width:100%;background:var(--bg);color:var(--tx);border:1px solid var(--ln2);border-radius:9px;padding:9px 11px;font:inherit;font-size:13.5px;transition:border-color .15s,box-shadow .15s}
+select:focus,input:focus,textarea:focus{outline:none;border-color:var(--in);box-shadow:0 0 0 3px var(--in-s)}
+select[multiple]{padding:4px}select[multiple] option{padding:6px 8px;border-radius:6px}select[multiple] option:checked{background:var(--ac-s);color:#6ee7b7}
+textarea{min-height:96px;line-height:1.5;resize:vertical}
+input[type=checkbox]{width:16px;height:16px;accent-color:var(--ac);margin:0;flex:none}
+.chk{display:flex;gap:8px;align-items:center;color:var(--mu);font-size:12.5px;margin-top:12px;cursor:pointer}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+
+/* ---------- buttons ---------- */
+button{font:inherit;font-weight:600;font-size:13px;border:0;border-radius:9px;padding:9px 14px;cursor:pointer;color:#fff;background:var(--in);
+ transition:transform .08s,filter .15s,background .15s;white-space:nowrap}
+button:hover{filter:brightness(1.1)}button:active{transform:scale(.97)}button:disabled{opacity:.45;cursor:default;transform:none}
+.b-ac{background:var(--ac);color:#052e1f}.b-wa{background:#22c55e;color:#052e16}.b-rd{background:var(--rd-s);color:#fda4af}
+.b-gh{background:var(--pn2);color:var(--tx);border:1px solid var(--ln2)}.b-gh:hover{background:#222a3d;filter:none}
+.wide{width:100%;margin-top:14px;padding:11px}
+
+/* ---------- main ---------- */
+main{display:flex;flex-direction:column;min-width:0;height:100vh}
+header{padding:20px 24px 0}
+.top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.top h1{font-size:22px;margin:0;letter-spacing:-.02em;flex:1}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:10px;margin-top:16px}
+.kpi{background:var(--pn);border:1px solid var(--ln);border-radius:var(--r);padding:12px 14px;cursor:pointer;transition:border-color .15s}
+.kpi:hover{border-color:var(--ln2)}.kpi.on{border-color:var(--ac);box-shadow:0 0 0 3px var(--ac-s)}
+.kpi small{color:var(--mu);font-size:12px;display:flex;align-items:center;gap:6px}.kpi b{font-size:24px;letter-spacing:-.02em;display:block;margin-top:2px}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.job{display:none;align-items:center;gap:10px;margin-top:14px;padding:10px 14px;border-radius:10px;background:var(--am-s);color:#fcd34d;font-size:13px}
+.job.on{display:flex}.job.ok{background:var(--ac-s);color:#6ee7b7}
+.spin{width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:sp 1s linear infinite;flex:none}
+@keyframes sp{to{transform:rotate(360deg)}}
+.tools{display:flex;gap:8px;align-items:center;padding:14px 24px;flex-wrap:wrap;border-bottom:1px solid var(--ln)}
+.search{position:relative;flex:1;min-width:150px;max-width:320px}.search input{padding-left:34px}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--mu2)}
+.tools select{width:auto}.sp{flex:1}
+.quota{font-size:12px;color:var(--mu);padding:6px 10px;border:1px solid var(--ln);border-radius:999px}.quota b{color:var(--tx)}
+
+.wrap{overflow:auto;flex:1;padding:0 12px 24px}
+table{width:100%;border-collapse:separate;border-spacing:0}
+th{position:sticky;top:0;z-index:1;background:var(--bg);color:var(--mu2);font-size:11.5px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;text-align:left;padding:12px 12px;border-bottom:1px solid var(--ln)}
+td{padding:12px;border-bottom:1px solid var(--ln);vertical-align:middle;font-size:13.5px}
+tbody tr{cursor:pointer;transition:background .12s}tbody tr:hover td{background:var(--pn)}
+.nm{font-weight:600}.sub{color:var(--mu);font-size:12px;margin-top:2px}
+.score{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:13px;
+ background:conic-gradient(var(--c) calc(var(--p)*1%),var(--ln) 0)}
+.score i{width:30px;height:30px;border-radius:50%;background:var(--bg);display:grid;place-items:center;font-style:normal}
+tbody tr:hover .score i{background:var(--pn)}
+.chips{display:flex;gap:5px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:11.5px;padding:3px 8px;border-radius:999px;background:var(--pn2);color:var(--mu);border:1px solid var(--ln)}
+.st{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--pn2);color:var(--mu)}
+.st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.st[data-s="ready"]{background:var(--in-s);color:#a5b4fc}.st[data-s="sent"]{background:var(--ac-s);color:#6ee7b7}
+.st[data-s="replied"]{background:var(--am-s);color:#fcd34d}.st[data-s="rejected"],.st[data-s="has site"],.st[data-s="no contact"]{background:var(--rd-s);color:#fda4af}
+.st[data-s="new"]{background:var(--sky-s);color:#7dd3fc}
+.empty{text-align:center;color:var(--mu);padding:60px 20px}
+
+/* ---------- drawer ---------- */
+#veil{position:fixed;inset:0;z-index:5;background:rgba(3,6,12,.55);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .2s}
+#veil.on{opacity:1;pointer-events:auto}
+#det{position:fixed;right:0;top:0;bottom:0;z-index:6;width:min(600px,100%);background:var(--bg2);border-left:1px solid var(--ln);box-shadow:var(--sh);
+ transform:translateX(105%);transition:transform .25s cubic-bezier(.2,.8,.2,1);overflow:auto;padding:22px 24px 30px}
+#det.on{transform:none}
+.dh{display:flex;gap:14px;align-items:flex-start}.dh h2{margin:0;font-size:20px;letter-spacing:-.01em}.dh .x{margin-left:auto;padding:7px 11px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}
+.fact{background:var(--pn);border:1px solid var(--ln);border-radius:10px;padding:10px 12px}.fact small{color:var(--mu);font-size:11.5px}.fact b{display:block;font-size:16px;margin-top:2px}
+.why{font-size:12.5px;color:var(--mu);background:var(--pn);border:1px solid var(--ln);border-radius:10px;padding:10px 12px}
+.demo{display:block;margin-top:14px;border-radius:12px;overflow:hidden;border:1px solid var(--ln2);max-height:340px;position:relative}
+.demo img{width:100%;display:block}.demo span{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.7);color:#fff;font-size:12px;padding:5px 10px;border-radius:999px}
+.sec{margin-top:20px;font-size:11.5px;color:var(--mu2);text-transform:uppercase;letter-spacing:.07em;font-weight:600}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.acts button{flex:1}
+details.more{margin-top:14px;font-size:12px;color:var(--mu)}details.more summary{cursor:pointer}details.more p{word-break:break-all}
+
+#term{border-top:1px solid var(--ln);background:#05070b;display:flex;flex-direction:column;height:230px;flex:none}
+#term.min{height:38px}#term.min .tp{display:none!important}
+.ttab{padding:3px 10px;border-radius:7px;color:var(--mu);font-weight:600}.ttab.on{background:var(--pn2);color:var(--tx)}
+.wb{display:inline-block;min-width:18px;padding:0 5px;border-radius:9px;background:var(--rd);color:#fff;font-size:11px;text-align:center;margin-left:4px}
+#wlog{flex:1;overflow:auto;padding:6px 16px 12px;font-size:13px}#wlog div{padding:6px 0;border-bottom:1px solid #111827;display:flex;gap:10px}
+#wlog .lv{font-size:11px;font-weight:700;padding:1px 7px;border-radius:6px;height:fit-content}.lv.info{background:var(--sky-s);color:#7dd3fc}.lv.warn{background:var(--am-s);color:#fcd34d}.lv.bad{background:var(--rd-s);color:#fda4af}
+.th{display:flex;align-items:center;gap:10px;padding:8px 16px;font-size:12px;color:var(--mu);cursor:pointer;user-select:none}
+.th b{color:var(--tx);font-weight:600;letter-spacing:.02em}.live{width:8px;height:8px;border-radius:50%;background:var(--ac);box-shadow:0 0 0 0 rgba(16,185,129,.6);animation:pulse 1.6s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 7px rgba(16,185,129,0)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
+#tlog{flex:1;overflow:auto;padding:4px 16px 12px;font:12.5px/1.6 ui-monospace,"SF Mono",Menlo,monospace;color:#cbd5e1}
+#tlog div{white-space:pre-wrap;word-break:break-word}#tlog .t{color:#475569;margin-right:10px}
+#tlog .ok{color:#6ee7b7}#tlog .er{color:#fda4af}#tlog .sl{color:#a5b4fc}#tlog .wt{color:#64748b}#tlog .pa{color:#fcd34d}
+/* ---------- views ---------- */
+.vnav{display:flex;gap:4px;padding:4px;background:var(--pn);border:1px solid var(--ln);border-radius:11px}
+.vnav button{background:none;color:var(--mu);padding:7px 14px;font-size:13px;border-radius:8px;display:flex;align-items:center;gap:7px}
+.vnav button.on{background:var(--pn2);color:var(--tx);box-shadow:0 1px 0 var(--ln2) inset}
+.vnav .bdg{font-size:11px;background:var(--am);color:#1a1200;border-radius:9px;padding:0 6px;min-width:18px;text-align:center}
+.view{display:none;flex:1;min-height:0;flex-direction:column}.view.on{display:flex;animation:fade .18s ease}
+.pad{padding:18px 24px;overflow:auto;flex:1}
+.grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.box{background:var(--pn);border:1px solid var(--ln);border-radius:var(--r);padding:16px}.box h3{margin:0 0 12px;font-size:13px;color:var(--mu);font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+.big{font-size:30px;font-weight:700;letter-spacing:-.02em}.big small{font-size:13px;color:var(--mu);font-weight:500;margin-left:6px}
+.fun{display:grid;gap:8px}.fun .r{display:grid;grid-template-columns:110px 1fr 70px;gap:10px;align-items:center;font-size:13px}
+.fun .bar{height:22px;border-radius:6px;background:var(--pn2);overflow:hidden}.fun .bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--in),var(--ac))}
+.todo{display:grid;gap:10px}.todo .t{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid var(--ln);border-radius:10px;background:var(--bg2)}
+.todo .t b{font-size:20px;min-width:34px;text-align:center}.todo .t span{flex:1;color:var(--mu);font-size:13px}
+.kan{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,1fr);gap:12px;padding:18px 24px;overflow:auto;flex:1;align-items:start}
+.col{background:var(--pn);border:1px solid var(--ln);border-radius:var(--r);display:flex;flex-direction:column;max-height:100%;min-height:120px}
+.col h4{margin:0;padding:12px 14px;font-size:12.5px;display:flex;justify-content:space-between;border-bottom:1px solid var(--ln)}
+.col .cards{padding:10px;display:grid;gap:8px;overflow:auto}.col.hover{border-color:var(--ac);box-shadow:0 0 0 3px var(--ac-s)}
+.card2{background:var(--bg2);border:1px solid var(--ln2);border-radius:9px;padding:9px 11px;cursor:grab;font-size:12.5px}
+.card2 b{display:block;font-size:13px}.card2 .sub{font-size:11.5px}.card2:active{cursor:grabbing}
+.fu{display:grid;gap:10px}.fu .it{border:1px solid var(--ln);border-radius:10px;padding:12px 14px;background:var(--pn)}
+.fu .it pre{white-space:pre-wrap;font:12.5px/1.5 inherit;color:var(--mu);margin:8px 0 0}
+.hb{display:grid;gap:7px}.hb .r{display:grid;grid-template-columns:140px 1fr 90px;gap:10px;align-items:center;font-size:12.5px}
+.hb .bar{height:14px;background:var(--pn2);border-radius:5px;position:relative;overflow:hidden}.hb .bar i{position:absolute;inset:0 auto 0 0;background:var(--in);border-radius:5px}.hb .bar u{position:absolute;inset:0 auto 0 0;background:var(--ac);border-radius:5px}
+.tl{display:grid;gap:6px;margin-top:8px}.tl div{font-size:12.5px;color:var(--mu);display:flex;gap:10px}.tl b{color:var(--tx);font-weight:600}
+.st[data-s="interested"]{background:rgba(168,85,247,.16);color:#d8b4fe}.st[data-s="meeting"]{background:var(--sky-s);color:#7dd3fc}.st[data-s="won"]{background:rgba(16,185,129,.25);color:#34d399}
+@media (max-width:1100px){.grid2,.grid3{grid-template-columns:1fr}}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;background:var(--pn2);border:1px solid var(--ln2);box-shadow:var(--sh);
+ padding:11px 18px;border-radius:999px;font-size:13px;transition:opacity .2s,transform .2s;pointer-events:none;z-index:9}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media (max-width:1100px){body{grid-template-columns:280px 1fr}.kpi b{font-size:21px}}
+@media (max-width:860px){body{grid-template-columns:1fr}#side,main{height:auto}}
+</style></head><body>
+<aside id="side">
+ <div class="brand"><div class="logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ecfdf5" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"/></svg></div>
+  <div><b>Lead Radar</b><span>Finds businesses without a website</span></div></div>
+ <nav class="tabs">
+  <button class="on" data-t="p1">Search</button><button data-t="p2">Robot</button><button data-t="p3">Accounts</button><button data-t="p4">Settings</button>
+ </nav>
+ <div class="panes">
+  <section class="pane on" id="p1">
+   <div class="card"><h4>Search one city</h4><p class="hint">Pick a country, a city and a category.</p>
+    <label for="country">Country</label><select id="country"></select>
+    <label for="city">City</label><select id="city"><option>Pick a country first</option></select>
+    <label for="category">Category</label><select id="category"></select>
+    <div class="two"><div><label for="radius">Radius, km</label><input id="radius" type="number" value="8"></div><div><label for="limit">Count</label><input id="limit" type="number" value="40"></div></div>
+    <label class="chk"><input type="checkbox" id="wantAll"> Include businesses with no visible contact</label>
+    <button class="b-ac wide" id="bSearch">Search</button>
+   </div>
+  </section>
+  <section class="pane" id="p2">
+   <div class="card"><h4>Auto radar</h4><p class="hint">Walks the biggest cities of the country chosen in the Search tab and prepares ready messages. It never sends anything by itself.</p>
+    <label for="autoCats">Categories <span style="color:var(--mu2)">(Cmd/Ctrl + click for several)</span></label><select id="autoCats" multiple size="7"></select>
+    <div class="two"><div><label for="nCities">Number of cities</label><input id="nCities" type="number" value="5"></div><div><label for="target">Target (ready)</label><input id="target" type="number" value="30"></div></div>
+    <button class="b-ac wide" id="bAuto">Start radar</button>
+   </div>
+  </section>
+  <section class="pane" id="p3">
+   <div class="card"><h4>Radar Chrome</h4><p class="hint">Log in to Gmail, Instagram and WhatsApp Web once. The login is remembered.</p>
+    <div class="two" style="margin-top:12px"><button id="bAcc">Log in</button><button class="b-gh" id="bAccSt">Check</button></div>
+    <p id="accSt" class="hint" style="margin-top:12px"></p>
+   </div>
+  </section>
+  <section class="pane" id="p4">
+   <div class="card"><h4>Message details</h4>
+    <label for="sender">Your name (signature)</label><input id="sender">
+    <label for="contact">Contact</label><input id="contact">
+    <label for="price">Price <span style="color:var(--mu2)">(may be empty)</span></label><input id="price" placeholder="e.g. 300 USD">
+    <label for="postal">Postal address <span style="color:var(--mu2)">(for US / Canada)</span></label><input id="postal">
+    <label for="gmail">Sender Gmail address</label><input id="gmail">
+    <p class="hint" style="margin-top:12px">Optional SMTP: set SMTP_USER / SMTP_PASSWORD in the environment <span id="pwok"></span>. Without it, Gmail web is used.</p>
+    <button class="wide" id="bSave">Save</button>
+   </div>
+  </section>
+ </div>
+</aside>
+
+<main>
+ <header>
+  <div class="top"><nav class="vnav" aria-label="Sections">
+   <button data-v="panel" class="on">Dashboard</button><button data-v="list">Leads</button><button data-v="pipe">Pipeline</button>
+   <button data-v="fu">Follow-up <span class="bdg" id="fuBdg" style="display:none"></span></button><button data-v="an">Analytics</button></nav>
+   <span class="sp"></span><span class="quota">E-mails today <b id="today">0</b> / <span id="cap"></span></span></div>
+  <div class="job" id="jobBox"><span class="spin" id="jobSpin"></span><span id="job"></span></div>
+ </header>
+ <section class="view on" id="v-panel"><div class="pad">
+  <div class="grid3">
+   <div class="box"><h3>Sent</h3><div class="big" id="pSent">0</div></div>
+   <div class="box"><h3>Replies</h3><div class="big" id="pRep">0<small></small></div></div>
+   <div class="box"><h3>Ready, queued</h3><div class="big" id="pReady">0</div></div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+   <div class="box"><h3>Sales funnel</h3><div class="fun" id="pFun"></div></div>
+   <div class="box"><h3>To do today</h3><div class="todo">
+    <div class="t"><b id="tRep">0</b><span>new replies: read and answer them</span><button class="b-gh" id="bReplies">Check replies</button></div>
+    <div class="t"><b id="tFu">0</b><span>follow-ups are due</span><button class="b-ac" id="bFuGo">Send follow-ups</button></div>
+    <div class="t"><b id="tReady">0</b><span>ready businesses are waiting to be sent</span><button class="b-gh" id="bGoReady">Go to list</button></div>
+   </div></div>
+  </div>
+ </div></section>
+ <section class="view" id="v-list">
+ <div style="padding:0 24px"><div class="kpis" id="stats"></div></div>
+ <div class="tools">
+  <div class="search"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" placeholder="Search by name or city"></div>
+  <select id="fStatus" aria-label="Status"><option value="">All statuses</option><option>new</option><option>ready</option><option>sent</option><option>replied</option><option>interested</option><option>meeting</option><option>won</option><option>rejected</option><option>has site</option><option>no contact</option><option value="follow-up">Needs reminder (3+ days)</option></select>
+  <label class="chk" style="margin:0"><input type="checkbox" id="onlyCity"> Selected city only</label>
+  <div style="display:flex;gap:8px;margin-left:auto">
+  <button class="b-gh" id="bPrep">Prepare</button>
+  <button class="b-gh" id="bSend">E-mail only</button>
+  <button class="b-ac" id="bOut">Send (WhatsApp → Instagram → e-mail)</button>
+  <button class="b-rd" id="bStop">Stop</button></div>
+ </div>
+ <div class="wrap" style="flex:1"><table><thead><tr><th style="width:36px"><input type="checkbox" id="all" aria-label="Select all"></th><th style="width:60px">Score</th><th>Business</th><th>Category</th><th>Contact</th><th>Status</th></tr></thead><tbody id="tb"></tbody></table></div>
+ </section>
+ <section class="view" id="v-pipe"><div class="kan" id="kan"></div></section>
+ <section class="view" id="v-fu"><div class="pad">
+  <div style="display:flex;gap:10px;align-items:center;margin-bottom:14px"><div class="sub" style="flex:1">Follow-ups go only to businesses that have not replied, and only during the business's opening hours: a reminder on day 3 and a "shall I close this?" question on day 7. They stop as soon as a reply arrives.</div>
+   <button class="b-ac" id="bFuGo2">Send to all</button></div>
+  <div class="fu" id="fuList"></div></div></section>
+ <section class="view" id="v-an"><div class="pad">
+  <div class="grid2"><div class="box"><h3>By channel (sent / replied)</h3><div class="hb" id="aCh"></div></div>
+   <div class="box"><h3>Sends per day</h3><div id="aDay"></div></div></div>
+  <div class="grid2" style="margin-top:14px"><div class="box"><h3>By country</h3><div class="hb" id="aCo"></div></div>
+   <div class="box"><h3>By business type</h3><div class="hb" id="aCat"></div></div></div>
+ </div></section>
+ <div id="term"><div class="th" id="tHead"><span class="live"></span><b class="ttab on" data-p="tlog">Terminal</b><b class="ttab" data-p="wlog">Watcher <span id="wbad" class="wb" style="display:none"></span></b><span class="sp" style="flex:1"></span><span id="tTog">hide ▾</span></div>
+ <div id="tlog" class="tp" role="log" aria-live="polite"></div><div id="wlog" class="tp" role="log" style="display:none"></div></div>
+</main>
+<div id="veil"></div><div id="det" role="dialog" aria-label="Business"></div><div class="toast" id="toast"></div>
+<script>
+const $=s=>document.querySelector(s);let META={},LEADS=[],STATS=[];
+const api=async(u,b)=>{const r=await fetch(u,b?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}:{});const j=await r.json();if(!r.ok)throw new Error(j.err||r.status);return j};
+const toast=t=>{const e=$('#toast');e.textContent=t;e.classList.add('on');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('on'),4000)};
+const esc=s=>(s??'').toString().replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button,.pane').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('#'+b.dataset.t).classList.add('on')});
+const SC=s=>s>=60?'#10b981':s>=40?'#f59e0b':'#5f687d';
+async function meta(){META=await api('/api/meta');
+ if(!$('#country').options.length){$('#country').innerHTML='<option value="">Select</option>'+Object.entries(META.countries).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join('');
+  $('#category').innerHTML=Object.entries(META.categories).map(([k,v])=>`<option value="${k}">${esc(v)}</option>`).join('');
+  $('#autoCats').innerHTML=$('#category').innerHTML;
+  for(const k of ['sender','contact','price','gmail','postal'])$('#'+k).value=META.settings[k]||'';
+  try{const s=JSON.parse(localStorage.getItem('radar')||'{}');if(s.country){$('#country').value=s.country;await loadCities(s.city)}if(s.category)$('#category').value=s.category}catch(e){}}
+ $('#pwok').textContent=META.has_pw?'(SMTP password found)':'';
+ $('#today').textContent=META.sent_today;$('#cap').textContent=META.cap;
+ const jb=$('#jobBox'),run=META.job.run,txt=META.job.text;
+ jb.classList.toggle('on',run||txt!=='idle');jb.classList.toggle('ok',!run);$('#jobSpin').style.display=run?'':'none';$('#job').textContent=run?txt:(txt!=='idle'?txt:'')}
+function remember(){try{localStorage.setItem('radar',JSON.stringify({country:$('#country').value,city:$('#city').value,category:$('#category').value}))}catch(e){}}
+async function loadCities(sel){$('#city').innerHTML='<option>Loading…</option>';try{const cs=await api('/api/cities?c='+$('#country').value);
+ $('#city').innerHTML=cs.map(c=>`<option>${esc(c.name)}</option>`).join('');if(sel)$('#city').value=sel}catch(e){toast('Cities: '+e.message)}}
+$('#country').onchange=()=>{loadCities();remember()};$('#city').onchange=remember;$('#category').onchange=remember;
+const KP=[['ready','Ready','#6366f1'],['sent','Sent','#10b981'],['replied','Replied','#f59e0b'],['new','Unchecked','#38bdf8'],['has site','Has a site','#f43f5e']];
+function kpis(){const n=s=>(STATS.find(x=>x.status===s)||{}).n||0,f=$('#fStatus').value;
+ $('#stats').innerHTML=KP.map(([s,t,c])=>`<div class="kpi ${f===s?'on':''}" data-s="${s}"><small><span class="dot" style="background:${c}"></span>${t}</small><b>${n(s)}</b></div>`).join('')}
+$('#stats').onclick=e=>{const k=e.target.closest('.kpi');if(!k)return;$('#fStatus').value=$('#fStatus').value===k.dataset.s?'':k.dataset.s;leads()};
+function render(){const q=$('#q').value.trim().toLowerCase(),sel=new Set(ids());
+ const rows=LEADS.filter(l=>!q||(l.name+' '+l.city).toLowerCase().includes(q));
+ $('#tb').innerHTML=rows.length?rows.map(l=>{const s=l.score??null;return `<tr data-id="${esc(l.id)}"><td><input type="checkbox" class="ck" value="${esc(l.id)}" ${sel.has(l.id)?'checked':''} aria-label="Select"></td>
+ <td><div class="score" style="--p:${s||0};--c:${SC(s||0)}"><i>${s??'–'}</i></div></td>
+ <td><div class="nm">${esc(l.name)}</div><div class="sub">${esc(l.city)} · ${esc(META.countries?.[l.country]||l.country)}${l.rating?` · ★ ${esc(l.rating)} (${esc(l.reviews||0)})`:''}</div></td>
+ <td><span class="sub" style="font-size:13px">${esc(META.categories[l.category]||l.category)}</span></td>
+ <td><div class="chips">${l.email?'<span class="chip">E-mail</span>':''}${l.phone?'<span class="chip">Phone</span>':''}${l.instagram?'<span class="chip">Instagram</span>':''}</div></td>
+ <td><span class="st" data-s="${esc(l.status)}">${esc(l.status)}</span>${(l.notes||'').includes('ERROR')?' <span title="Has an error" style="color:#fda4af">!</span>':''}</td></tr>`}).join('')
+ :'<tr><td colspan="6" class="empty">No businesses here yet. Start a search on the left.</td></tr>'}
+async function leads(){const q=new URLSearchParams();if($('#fStatus').value)q.set('status',$('#fStatus').value);
+ if($('#onlyCity').checked&&$('#country').value){q.set('country',$('#country').value);q.set('city',$('#city').value)}
+ LEADS=await api('/api/leads?'+q);render();STATS=await api('/api/stats');kpis()}
+$('#q').oninput=render;
+$('#tb').onclick=e=>{if(e.target.closest('input'))return;const tr=e.target.closest('tr[data-id]');if(tr)show(tr.dataset.id)};
+$('#all').onchange=e=>document.querySelectorAll('.ck').forEach(c=>c.checked=e.target.checked);
+const ids=()=>[...document.querySelectorAll('.ck:checked')].map(e=>e.value);
+$('#bSearch').onclick=async()=>{if(!$('#country').value)return toast('Select a country');const b=$('#bSearch');b.disabled=true;b.textContent='Searching…';
+ try{const r=await api('/api/search',{country:$('#country').value,city:$('#city').value,category:$('#category').value,radius:$('#radius').value,limit:$('#limit').value,all:$('#wantAll').checked});toast(r.new+' new businesses found');$('#onlyCity').checked=true;leads()}
+ catch(e){toast(e.message)}b.disabled=false;b.textContent='Search'};
+$('#bPrep').onclick=async()=>{const i=ids();if(!i.length)return toast('Select businesses from the list first');try{await api('/api/prepare',{ids:i});toast(i.length+' businesses being prepared')}catch(e){toast(e.message)}};
+$('#bSend').onclick=async()=>{const i=ids().filter(id=>{const l=LEADS.find(x=>x.id===id);return l&&l.email&&l.status==='ready'});
+ if(!i.length)return toast('None of the selected businesses are "ready" with an e-mail address');
+ if(!confirm(i.length+' businesses will be e-mailed (from '+$('#gmail').value+', 1–2.5 minutes apart). Confirm?'))return;try{await api('/api/send',{ids:i});toast('Sending started')}catch(e){toast(e.message)}};
+$('#bOut').onclick=async()=>{const i=ids().filter(id=>(LEADS.find(x=>x.id===id)||{}).status==='ready');
+ if(!i.length)return toast('Select "ready" businesses from the list');
+ if(!confirm(i.length+' businesses will get a message with the demo picture: WhatsApp first, then Instagram if that fails, then e-mail. Only during the business\'s local 9:00–19:00, 2–5 minutes apart, at most 40 per channel per day. Confirm?'))return;
+ try{await api('/api/outreach',{ids:i});toast('Sending started')}catch(e){toast(e.message)}};
+$('#bAuto').onclick=async()=>{if(!$('#country').value){document.querySelector('[data-t=p1]').click();return toast('Select a country in the Search tab first')}
+ const cats=[...$('#autoCats').selectedOptions].map(o=>o.value);if(!cats.length)return toast('Select at least one category');
+ try{await api('/api/auto',{country:$('#country').value,cats,ncities:$('#nCities').value,target:$('#target').value});toast('Radar started');$('#onlyCity').checked=false}catch(e){toast(e.message)}};
+$('#bStop').onclick=()=>api('/api/stop',{}).then(()=>toast('Stopping…'));
+$('#fStatus').onchange=leads;$('#onlyCity').onchange=leads;
+$('#bSave').onclick=async()=>{const b={};for(const k of ['sender','contact','price','gmail','postal'])b[k]=$('#'+k).value;await api('/api/settings',b);toast('Saved');meta()};
+function closeDet(){$('#det').classList.remove('on');$('#veil').classList.remove('on')}
+$('#veil').onclick=closeDet;document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDet()});
+function show(id){const l=LEADS.find(x=>x.id===id);if(!l)return;const d=$('#det');const digits=(l.whatsapp||l.phone||'').replace(/\D/g,'');const s=l.score??0;const ID=esc(l.id);
+ d.innerHTML=`<div class="dh"><div class="score" style="--p:${s};--c:${SC(s)};width:48px;height:48px;flex:none"><i style="width:39px;height:39px;background:var(--bg2)">${l.score??'–'}</i></div>
+  <div><h2>${esc(l.name)}</h2><div class="sub">${esc(META.categories[l.category]||'')} · ${esc(l.city)}, ${esc(META.countries?.[l.country]||l.country)}</div></div>
+  <button class="b-gh x" onclick="closeDet()" aria-label="Close">✕</button></div>
+ <div class="facts"><div class="fact"><small>Google</small><b>${l.rating?'★ '+esc(l.rating):'–'}</b></div><div class="fact"><small>Reviews</small><b>${l.reviews?esc(l.reviews):'–'}</b></div><div class="fact"><small>Status</small><b style="font-size:13px;margin-top:5px"><span class="st" data-s="${esc(l.status)}">${esc(l.status)}</span></b></div></div>
+ ${l.reasons||l.platforms?`<div class="why">${l.reasons?'<b style="color:var(--tx)">Why this score:</b> '+esc(l.reasons):''}${l.platforms?'<br><b style="color:var(--tx)">Platforms:</b> '+esc(l.platforms):''}</div>`:''}
+ <div class="sub" style="margin-top:10px">${esc(l.phone)}${l.instagram?' · @'+esc(l.instagram):''}${l.address?' · '+esc(l.address):''}</div>
+ ${l.png?`<a class="demo" href="/demo?id=${encodeURIComponent(l.id)}" target="_blank"><img alt="Demo site" src="/demo?png=1&id=${encodeURIComponent(l.id)}&t=${Date.now()}"><span>Open demo ↗</span></a>`:'<p class="why" style="margin-top:14px">No demo yet. Select it in the list and press "Prepare".</p>'}
+ <div class="sec">Short message · WhatsApp / Instagram</div><textarea id="dShort" style="margin-top:8px">${esc(l.msg_short)}</textarea>
+ <div class="acts">${digits?`<button class="b-wa" onclick="dm('${ID}','whatsapp')">Send on WhatsApp</button>`:''}
+  ${l.instagram?`<button onclick="dm('${ID}','instagram')">Instagram DM</button>`:`<button class="b-gh" onclick="ig('${ID}')">Find on Instagram</button>`}
+  ${l.png?`<button class="b-gh" onclick="cimg('${ID}')">Copy picture</button>`:''}</div>
+ <div class="sec">E-mail</div>
+ <label for="dEmail">Address</label><input id="dEmail" value="${esc(l.email)}"><label for="dSub">Subject</label><input id="dSub" value="${esc(l.msg_subject)}">
+ <label for="dBody">Body</label><textarea id="dBody" rows="11">${esc(l.msg_body)}</textarea>
+ <div class="acts"><button class="b-gh" onclick="saveMsg('${ID}')">Save text</button></div>
+ <div class="sec">Stage</div>
+ <div class="acts"><select id="dStage" aria-label="Stage" style="flex:1">${PIPE.map(([s,t])=>`<option value="${s}" ${l.status===s?'selected':''}>${t}</option>`).join('')}</select><button class="b-ac" onclick="mk('${ID}',$('#dStage').value)">Save</button></div>
+ <div class="sec">History</div><div class="tl" id="dTl"><div>Loading…</div></div>
+ <details class="more"><summary>Website check: ${esc(l.site)}</summary><p>${esc(l.site_hits)}</p>${l.notes?'<p>'+esc(l.notes)+'</p>':''}</details>`;
+ d.classList.add('on');$('#veil').classList.add('on');d.scrollTop=0;
+ api('/api/touches?id='+encodeURIComponent(l.id)).then(t=>{const N={send:'sent',reply:'💬 reply received'};$('#dTl').innerHTML=t.length?t.map(x=>`<div><b>${esc(x.ts)}</b><span>${esc(x.channel)} · ${x.kind==='send'?(x.step?'follow-up '+x.step:'first message'):N[x.kind]||x.kind}</span></div>`).join(''):'<div>No touches yet</div>'}).catch(()=>{})}
+async function saveMsg(id){await api('/api/save_msg',{id,subject:$('#dSub').value,body:$('#dBody').value,short:$('#dShort').value,email:$('#dEmail').value});toast('Saved');leads()}
+async function ig(id){const l=LEADS.find(x=>x.id===id);await navigator.clipboard.writeText($('#dShort').value).catch(()=>{});
+ const url=l.instagram?'https://www.instagram.com/'+l.instagram+'/':'https://www.instagram.com/explore/search/keyword/?q='+encodeURIComponent(l.name+' '+l.city);
+ await api('/api/open',{url});toast('Message copied. On Instagram: Message → paste → send')}
+async function cimg(id){try{await api('/api/copyimg',{id});toast('Demo picture copied: paste it in the chat (Cmd/Ctrl+V)')}catch(e){toast(e.message)}}
+async function dm(id,ch){await saveMsg(id);toast(ch+': sending…');try{await api('/api/dm',{id,channel:ch});toast(ch+': sent ✓');closeDet();leads()}catch(e){toast('Error: '+e.message)}}
+$('#bAcc').onclick=()=>api('/api/accounts',{}).then(()=>toast('Radar Chrome opened: log in to your accounts')).catch(e=>toast(e.message));
+$('#bAccSt').onclick=async()=>{$('#accSt').textContent='Checking…';try{const s=await api('/api/acct_status',{});$('#accSt').innerHTML='Gmail: <b>'+esc(s.gmail||'none')+'</b><br>Instagram: <b>'+(s.instagram?'logged in':'not logged in')+'</b>'+'<br>WhatsApp: <b>'+({ok:'logged in',qr:'QR code not scanned'}[s.whatsapp]||'unknown, check again')+'</b>'}catch(e){$('#accSt').textContent=e.message}};
+async function mk(id,s){await api('/api/mark',{id,status:s,channel:'manual'});toast('Stage: '+s);leads();refreshView();closeDet()}
+let LOGID=0;
+const LC=t=>/^✓/.test(t)?'ok':/^✗/.test(t)?'er':/^▶/.test(t)?'sl':/^…/.test(t)?'wt':/^⏸/.test(t)?'pa':'';
+async function tlog(){try{const rows=await api('/api/log?after='+LOGID);if(!rows.length)return;const el=$('#tlog'),atEnd=el.scrollHeight-el.scrollTop-el.clientHeight<40;
+ el.insertAdjacentHTML('beforeend',rows.map(r=>`<div class="${LC(r.what)}"><span class="t">${esc(r.ts.slice(5))}</span>${esc(r.what)}</div>`).join(''));LOGID=rows[rows.length-1].id;
+ while(el.children.length>500)el.firstChild.remove();if(atEnd)el.scrollTop=el.scrollHeight}catch(e){}}
+document.querySelectorAll('.ttab').forEach(b=>b.onclick=e=>{e.stopPropagation();document.querySelectorAll('.ttab').forEach(x=>x.classList.toggle('on',x===b));
+ document.querySelectorAll('.tp').forEach(x=>x.style.display=x.id===b.dataset.p?'':'none');if(b.dataset.p==='wlog'){try{localStorage.setItem('wack',WLAST)}catch(e){}wpoll()}});
+let WLAST=0;const LVN={info:'info',warn:'warning',bad:'serious'};
+async function wpoll(){try{const ev=await api('/api/watch?n=120');if(!ev.length)return;WLAST=ev[ev.length-1].i;
+ $('#wlog').innerHTML=ev.slice().reverse().map(e=>`<div><span class="mu">${esc(e.t)}</span><span class="lv ${e.level}">${LVN[e.level]}</span><span>${esc(e.msg)}</span></div>`).join('');
+ let ack=0;try{ack=+localStorage.getItem('wack')||0}catch(e){};const n=ev.filter(e=>e.i>ack&&e.level!=='info').length;const b=$('#wbad');b.style.display=n?'':'none';b.textContent=n}catch(e){}}
+wpoll();setInterval(wpoll,5000);
+$('#tHead').onclick=()=>{const t=$('#term');t.classList.toggle('min');$('#tTog').textContent=t.classList.contains('min')?'show ▴':'hide ▾';try{localStorage.setItem('termMin',t.classList.contains('min')?1:0)}catch(e){}};
+try{if(localStorage.getItem('termMin')==='1')$('#tHead').click()}catch(e){}
+tlog().then(()=>{$('#tlog').scrollTop=1e9});setInterval(tlog,2000);
+// ---------- views ----------
+let VIEW='panel';
+function view(v){VIEW=v;document.querySelectorAll('.vnav button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+ document.querySelectorAll('.view').forEach(x=>x.classList.toggle('on',x.id==='v-'+v));try{localStorage.setItem('view',v)}catch(e){}refreshView()}
+document.querySelectorAll('.vnav button').forEach(b=>b.onclick=()=>view(b.dataset.v));
+const PIPE=[['ready','Ready'],['sent','Sent'],['replied','Replied'],['interested','Interested'],['meeting','Meeting / call'],['won','Won ✓'],['rejected','Rejected']];
+let AN=null;
+async function refreshView(){try{
+ AN=await api('/api/analytics');const f=AN.funnel,sent=f[2][1],rep=f[3][1];
+ $('#fuBdg').style.display=AN.due?'':'none';$('#fuBdg').textContent=AN.due;
+ if(VIEW==='panel'){$('#pSent').textContent=sent;$('#pRep').innerHTML=rep+`<small>${sent?Math.round(rep*100/sent):0}%</small>`;$('#pReady').textContent=AN.status['ready']||0;
+  const mx=f[0][1]||1;$('#pFun').innerHTML=f.map(([k,n],i)=>`<div class="r"><span>${k}</span><div class="bar"><i style="width:${Math.max(2,n*100/mx)}%"></i></div><b>${n}${i>0&&f[i-1][1]?` <span class="sub">${Math.round(n*100/f[i-1][1])}%</span>`:''}</b></div>`).join('');
+  $('#tRep').textContent=AN.status['replied']||0;$('#tFu').textContent=AN.due;$('#tReady').textContent=AN.status['ready']||0}
+ if(VIEW==='pipe'){const all=await api('/api/leads');const by={};all.forEach(l=>(by[l.status]=by[l.status]||[]).push(l));
+  $('#kan').innerHTML=PIPE.map(([s,t])=>`<div class="col" data-s="${s}"><h4><span class="st" data-s="${s}">${t}</span><span class="sub">${(by[s]||[]).length}</span></h4><div class="cards">${(by[s]||[]).slice(0,120).map(l=>`<div class="card2" draggable="true" data-id="${esc(l.id)}"><b>${esc(l.name)}</b><div class="sub">${esc(l.city)} · ${esc(l.country)} · score ${l.score??'–'}${l.last_ch?' · '+esc(l.last_ch):''}${(l.notes||'').includes('WA read')?' · ✓✓ read':''}</div></div>`).join('')}</div></div>`).join('');
+  pipeDnD(all)}
+ if(VIEW==='fu'){const fl=await api('/api/followups');$('#fuList').innerHTML=fl.length?fl.map(x=>`<div class="it"><b>${esc(x.name)}</b> <span class="sub">${esc(x.country)} · ${esc(x.ch)} · reminder ${x.step}</span><pre>${esc(x.text)}</pre></div>`).join(''):'<div class="empty">No follow-ups are due yet. The first reminders appear here 3 days after sending.</div>'}
+ if(VIEW==='an'){const hb=(rows,lab)=>{const mx=Math.max(1,...rows.map(r=>r.sent));return rows.slice(0,12).map(r=>`<div class="r"><span>${esc(lab?lab(r.k):r.k)}</span><div class="bar"><i style="width:${r.sent*100/mx}%"></i><u style="width:${(r.rep||0)*100/mx}%"></u></div><span class="sub">${r.sent} / ${r.rep||0} (${r.sent?Math.round((r.rep||0)*100/r.sent):0}%)</span></div>`).join('')||'<div class="sub">No data</div>'};
+  $('#aCh').innerHTML=hb(AN.by_channel);$('#aCo').innerHTML=hb(AN.by_country,k=>META.countries?.[k]||k);$('#aCat').innerHTML=hb(AN.by_category,k=>META.categories?.[k]||k);
+  const d=AN.daily,mx=Math.max(1,...d.map(x=>x.n)),W=Math.max(1,d.length);
+  $('#aDay').innerHTML=d.length?`<svg viewBox="0 0 ${W*40} 140" width="100%" height="150" role="img" aria-label="Sends per day">${d.map((x,i)=>`<rect x="${i*40+8}" y="${120-x.n*100/mx}" width="24" height="${x.n*100/mx}" rx="4" fill="#6366f1"><title>${x.d}: ${x.n}</title></rect><text x="${i*40+20}" y="${114-x.n*100/mx}" fill="#cbd5e1" font-size="11" text-anchor="middle">${x.n}</text><text x="${i*40+20}" y="136" fill="#64748b" font-size="10" text-anchor="middle">${x.d.slice(5)}</text>`).join('')}</svg>`:'<div class="sub">No data</div>'}
+}catch(e){}}
+function pipeDnD(all){document.querySelectorAll('.card2').forEach(c=>{c.ondragstart=e=>e.dataTransfer.setData('text/plain',c.dataset.id);c.onclick=()=>{LEADS=all;show(c.dataset.id)}});
+ document.querySelectorAll('.col').forEach(col=>{col.ondragover=e=>{e.preventDefault();col.classList.add('hover')};col.ondragleave=()=>col.classList.remove('hover');
+  col.ondrop=async e=>{e.preventDefault();col.classList.remove('hover');const id=e.dataTransfer.getData('text/plain');try{await api('/api/mark',{id,status:col.dataset.s,channel:'pipeline'});toast('Stage: '+col.dataset.s);refreshView()}catch(x){toast(x.message)}}})}
+async function fuGo(){if(!AN||!AN.due)return toast('No business has a follow-up due');
+ if(!confirm(AN.due+' businesses will get a short reminder (same channel, no picture/PDF, business hours only, 1.5–4 minutes apart). Confirm?'))return;
+ try{await api('/api/followup',{});toast('Follow-up started')}catch(e){toast(e.message)}}
+$('#bFuGo').onclick=fuGo;$('#bFuGo2').onclick=fuGo;
+$('#bReplies').onclick=async()=>{toast('Checking replies… (WhatsApp, Instagram, Gmail)');try{const r=await api('/api/check_replies',{});toast(r.found.length?'New reply: '+r.found.join(', '):'No new replies');refreshView();leads()}catch(e){toast(e.message)}};
+$('#bGoReady').onclick=()=>{$('#fStatus').value='ready';view('list');leads()};
+try{const v=localStorage.getItem('view');if(v&&document.getElementById('v-'+v))VIEW=v}catch(e){}
+// Deep links: #pipe opens a view, #lead:<id> opens a lead's detail panel (used for the README screenshots)
+const HASH=decodeURIComponent(location.hash.slice(1));if(document.getElementById('v-'+HASH))VIEW=HASH;
+meta().then(async()=>{await leads();view(VIEW);if(HASH.startsWith('lead:'))show(HASH.slice(5))});setInterval(()=>{meta();if(META.job&&META.job.run){leads();refreshView()}},4000);setInterval(refreshView,30000);
+</script></body></html>

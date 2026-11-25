@@ -1,0 +1,52 @@
+{
+ "dm": "Bom dia, {name}! {fact}\n\nPreparei-vos gratuitamente um exemplo de site, que segue em anexo. {gain}\n\nSeria má ideia mostrar-vos a versão completa? E se não for do vosso interesse, basta dizerem-me e não volto a escrever.\n— {sender}",
+ "dm_reviews": "Vi a vossa avaliação de {rating}★ em {reviews} opiniões no Google, mas quem vos procura online não encontra um site vosso.",
+ "dm_platform": "Reparei que os novos clientes só conseguem marcar convosco através do {platform}, que cobra comissão.",
+ "dm_insta": "O vosso Instagram mostra um ótimo trabalho, mas quem vos procura no Google não encontra um site vosso.",
+ "dm_none": "Reparei que ainda não têm um site próprio.",
+ "gain_platform": "Com um site próprio, os clientes marcam diretamente convosco, sem comissões, e o Google traz-vos mais clientes novos.",
+ "gain_default": "Um site assim faz com que quem vos procura no Google vos ligue, faça marcações e se torne cliente.",
+ "cat_x": {
+  "hair": "salão de cabelereiro",
+  "nails": "salão de manicure"
+ },
+ "services_x": {
+  "hair": [
+   "Cortes e penteados",
+   "Coloração e mechas",
+   "Tratamentos capilares"
+  ],
+  "nails": [
+   "Manicure e pedicure",
+   "Unhas em gel e acrílico",
+   "Nail art"
+  ]
+ },
+ "pdf_mobile": "No telemóvel",
+ "pdf_full": "A página inteira",
+ "pdf_sub": "Proposta de site gratuita, feita para vós",
+ "fu1": "Bom dia, {name}! Só queria saber se viram o exemplo de site gratuito que vos preparei há alguns dias. Se for útil, mostro-vos com gosto a versão completa.\n— {sender}",
+ "fu2": "Bom dia, {name}. Como não recebi resposta, presumo que um site não seja uma prioridade neste momento. Seria má ideia encerrar o assunto da minha parte? Se mais tarde quiserem ver a versão completa, basta responderem aqui.\n— {sender}",
+ "cat_trade": {
+  "plumber": "canalizador",
+  "electrician": "eletricista",
+  "builder": "empresa de remodelações"
+ },
+ "services_trade": {
+  "plumber": [
+   "Reparação de fugas e canos",
+   "Instalação de casas de banho e cozinhas",
+   "Esquentadores e aquecimento"
+  ],
+  "electrician": [
+   "Instalações e reparações",
+   "Iluminação",
+   "Inspeções e certificados"
+  ],
+  "builder": [
+   "Remodelações e ampliações",
+   "Cozinhas e casas de banho",
+   "Orçamento gratuito"
+  ]
+ }
+}

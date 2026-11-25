@@ -1,0 +1,126 @@
+{
+ "cat": {
+  "restaurant": "ristorante",
+  "cafe": "caffetteria",
+  "fast_food": "fast food",
+  "barber": "barbiere e parrucchiere",
+  "beauty": "centro estetico",
+  "dentist": "studio dentistico",
+  "car_repair": "officina meccanica",
+  "bakery": "panetteria",
+  "hotel": "hotel",
+  "gym": "palestra",
+  "florist": "fioraio",
+  "clothes": "negozio di abbigliamento",
+  "pharmacy": "farmacia",
+  "vet": "clinica veterinaria",
+  "car_wash": "autolavaggio"
+ },
+ "hero": "Il tuo {cat} di fiducia a {city}",
+ "sub": "Chiamaci, ottieni indicazioni o scrivici su WhatsApp.",
+ "call": "Chiama ora",
+ "wa": "WhatsApp",
+ "route": "Indicazioni",
+ "about": "Chi siamo",
+ "about_t": "{name} · {cat} a {city}. Ci prendiamo cura di ogni cliente: buon servizio, cordialità e prezzi onesti.",
+ "hours": "Orari di apertura",
+ "contact": "Contatti",
+ "demo": "Questa pagina è un modello di design creato per {name}.",
+ "subject": "Un sito web gratuito per {name}",
+ "email": "Ciao team di {name},\n\nVi ho cercato online ma non ho trovato un sito web. La maggior parte dei clienti cerca prima su Google, e le attività senza sito li perdono a favore dei concorrenti.\n\nHo preparato per voi un modello gratuito (in allegato): telefono, WhatsApp, indicazioni, orari di apertura, ottimizzato per mobile.\n\nSe vi piace, posso metterlo online in pochi giorni{price}. Se non siete interessati, rispondete semplicemente \"no\" e non vi scriverò più.\n\nCordiali saluti,\n{sender}\n{contact}",
+ "short": "Ciao! Ho creato un sito di esempio gratuito per {name} (telefono, WhatsApp, indicazioni, ottimizzato per mobile). Volete vederlo? Nessun problema se no. — {sender}",
+ "price": " per {price}",
+ "services_title": "Cosa offriamo",
+ "why_title": "Perché sceglierci",
+ "why": [
+  "Team cordiale ed esperto",
+  "Prezzi onesti e trasparenti",
+  "Facili da raggiungere: chiama o WhatsApp"
+ ],
+ "visit": "Vieni a trovarci",
+ "services": {
+  "restaurant": [
+   "Piatti freschi ogni giorno",
+   "Cena per famiglie",
+   "Asporto e ordini per gruppi"
+  ],
+  "cafe": [
+   "Caffè e bevande calde",
+   "Colazioni e dolci",
+   "Locale accogliente per incontrarsi"
+  ],
+  "fast_food": [
+   "Pasti veloci",
+   "Asporto",
+   "Offerte giornaliere"
+  ],
+  "barber": [
+   "Tagli e styling",
+   "Rifinitura barba e rasatura",
+   "Cura dei capelli"
+  ],
+  "beauty": [
+   "Cura della pelle",
+   "Unghie e trucco",
+   "Cura estetica personalizzata"
+  ],
+  "dentist": [
+   "Controlli e pulizia",
+   "Otturazioni e trattamenti",
+   "Odontoiatria estetica"
+  ],
+  "car_repair": [
+   "Diagnosi",
+   "Manutenzione e cambio olio",
+   "Riparazioni in garanzia"
+  ],
+  "bakery": [
+   "Pane fresco ogni mattina",
+   "Torte e pasticcini",
+   "Ordini per eventi"
+  ],
+  "hotel": [
+   "Camere confortevoli",
+   "Colazione",
+   "Reception cordiale"
+  ],
+  "gym": [
+   "Attrezzature moderne",
+   "Personal training",
+   "Abbonamenti flessibili"
+  ],
+  "florist": [
+   "Bouquet freschi",
+   "Decorazioni per eventi",
+   "Ordini in giornata"
+  ],
+  "clothes": [
+   "Nuove collezioni",
+   "Taglie per tutti",
+   "Consigli cordiali"
+  ],
+  "pharmacy": [
+   "Farmaci e consigli",
+   "Prodotti per salute e bellezza",
+   "Farmacisti cordiali"
+  ],
+  "vet": [
+   "Controlli e vaccinazioni",
+   "Trattamenti e cure",
+   "Consigli per i proprietari"
+  ],
+  "car_wash": [
+   "Lavaggio esterno",
+   "Pulizia interna",
+   "Detailing"
+  ]
+ },
+ "hook_reviews": "Ho visto la vostra valutazione di {rating}★ da {reviews} recensioni Google. I vostri clienti vi apprezzano, ma quando nuovi utenti vi cercano, non c'è un sito web da mostrare.",
+ "hook_platform": "Al momento i nuovi clienti possono trovarvi solo tramite {platform}. Quei siti trattengono una commissione e mostrano i vostri concorrenti proprio accanto a voi; un sito web vostro tiene il cliente con voi.",
+ "hook_instagram": "Il vostro Instagram mostra già il vostro lavoro; un sito web semplice trasformerebbe quei visitatori in chiamate e prenotazioni, e vi aiuterebbe anche a comparire più in alto su Google.",
+ "hook_offer": "Il vostro sito includerebbe: {services}, un pulsante diretto per chiamare e WhatsApp, una mappa con indicazioni e i vostri orari di apertura.",
+ "short_reviews": "Ho visto la vostra valutazione di {rating}★ ({reviews} recensioni) su Google.",
+ "short_platform": "Ho notato che i clienti possono prenotare solo tramite {platform}.",
+ "booking": "prenotazione online",
+ "menu": "il vostro menù"
+}

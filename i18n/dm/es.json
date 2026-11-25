@@ -1,0 +1,52 @@
+{
+ "dm": "¡Hola, {name}! {fact}\n\nLes he preparado gratis un ejemplo de página web; la tienen en el archivo adjunto. {gain}\n\n¿Sería mala idea si les enseño la versión completa? Y si no les interesa, díganmelo sin problema y no vuelvo a escribir.\n— {sender}",
+ "dm_reviews": "He visto su valoración de {rating}★ con {reviews} reseñas en Google, pero quien los busca en internet no encuentra una web suya.",
+ "dm_platform": "He visto que los clientes nuevos solo pueden reservar con ustedes a través de {platform}, que se lleva una comisión.",
+ "dm_insta": "Su Instagram muestra un trabajo estupendo, pero quien los busca en Google no encuentra una web suya.",
+ "dm_none": "He visto que todavía no tienen página web propia.",
+ "gain_platform": "Con su propia web, los clientes reservan directamente con ustedes, sin comisiones, y Google les trae clientes nuevos.",
+ "gain_default": "Una web así hace que quien los busca en Google los llame, reserve y acabe siendo cliente.",
+ "cat_x": {
+  "hair": "peluquería",
+  "nails": "salón de uñas"
+ },
+ "services_x": {
+  "hair": [
+   "Cortes y peinados",
+   "Color y mechas",
+   "Tratamientos capilares"
+  ],
+  "nails": [
+   "Manicura y pedicura",
+   "Uñas de gel y acrílicas",
+   "Nail art"
+  ]
+ },
+ "pdf_mobile": "En el móvil",
+ "pdf_full": "La página completa",
+ "pdf_sub": "Concepto de web gratis, hecho para ustedes",
+ "fu1": "¡Hola, {name}! Solo quería saber si vieron el ejemplo de web gratis que les preparé hace unos días. Si les resulta útil, con gusto les enseño la versión completa.\n— {sender}",
+ "fu2": "Hola, {name}. Como no he recibido respuesta, entiendo que ahora mismo una web no es una prioridad para ustedes. ¿Sería mala idea si cierro el tema por mi parte? Si más adelante quieren ver la versión completa, solo respondan aquí.\n— {sender}",
+ "cat_trade": {
+  "plumber": "fontanero",
+  "electrician": "electricista",
+  "builder": "empresa de reformas"
+ },
+ "services_trade": {
+  "plumber": [
+   "Reparación de fugas y tuberías",
+   "Instalación de baños y cocinas",
+   "Calderas y calefacción"
+  ],
+  "electrician": [
+   "Instalaciones y reparaciones",
+   "Instalación de iluminación",
+   "Revisiones y boletines"
+  ],
+  "builder": [
+   "Reformas integrales",
+   "Cocinas y baños",
+   "Presupuesto sin compromiso"
+  ]
+ }
+}

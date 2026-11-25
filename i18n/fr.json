@@ -1,0 +1,126 @@
+{
+ "cat": {
+  "restaurant": "restaurant",
+  "cafe": "café",
+  "fast_food": "fast-food",
+  "barber": "barbier & salon de coiffure",
+  "beauty": "salon de beauté",
+  "dentist": "cabinet dentaire",
+  "car_repair": "garage automobile",
+  "bakery": "boulangerie",
+  "hotel": "hôtel",
+  "gym": "salle de sport",
+  "florist": "fleuriste",
+  "clothes": "magasin de vêtements",
+  "pharmacy": "pharmacie",
+  "vet": "clinique vétérinaire",
+  "car_wash": "station de lavage"
+ },
+ "hero": "Votre {cat} de confiance à {city}",
+ "sub": "Appelez-nous, venez nous voir ou écrivez-nous sur WhatsApp.",
+ "call": "Appeler",
+ "wa": "WhatsApp",
+ "route": "Itinéraire",
+ "about": "À propos",
+ "about_t": "{name} · {cat} à {city}. Nous prenons soin de chaque client : bon service, accueil chaleureux et prix justes.",
+ "hours": "Horaires d'ouverture",
+ "contact": "Contact",
+ "demo": "Cette page est une maquette réalisée pour {name}.",
+ "subject": "Un site web gratuit pour {name}",
+ "email": "Bonjour l'équipe {name},\n\nJe vous ai cherchés en ligne mais je n'ai pas trouvé de site web. La plupart des clients cherchent d'abord sur Google, et les commerces sans site perdent ces clients au profit des concurrents.\n\nJ'ai réalisé une maquette gratuite pour vous (en pièce jointe) : téléphone, WhatsApp, itinéraire, horaires, adaptée au mobile.\n\nSi elle vous plaît, je peux la mettre en ligne en quelques jours{price}. Si cela ne vous intéresse pas, répondez simplement « non » et je ne vous réécrirai pas.\n\nCordialement,\n{sender}\n{contact}",
+ "short": "Bonjour ! J'ai réalisé une maquette de site gratuite pour {name} (téléphone, WhatsApp, itinéraire, adaptée au mobile). Souhaitez-vous la voir ? Aucun souci si ce n'est pas le cas. — {sender}",
+ "price": " pour {price}",
+ "services_title": "Nos prestations",
+ "why_title": "Pourquoi nous choisir",
+ "why": [
+  "Équipe sympathique et expérimentée",
+  "Prix justes et transparents",
+  "Facile à joindre : appel ou WhatsApp"
+ ],
+ "visit": "Venez nous voir",
+ "services": {
+  "restaurant": [
+   "Plats frais du jour",
+   "Repas en famille",
+   "À emporter & groupes"
+  ],
+  "cafe": [
+   "Café & boissons chaudes",
+   "Petit-déjeuner & desserts",
+   "Lieu convivial pour se retrouver"
+  ],
+  "fast_food": [
+   "Repas rapides",
+   "À emporter",
+   "Offres du jour"
+  ],
+  "barber": [
+   "Coupes & coiffage",
+   "Taille de barbe & rasage",
+   "Soins capillaires"
+  ],
+  "beauty": [
+   "Soins de la peau",
+   "Ongles & maquillage",
+   "Soins beauté personnalisés"
+  ],
+  "dentist": [
+   "Contrôles & détartrage",
+   "Soins & plombages",
+   "Dentisterie esthétique"
+  ],
+  "car_repair": [
+   "Diagnostic",
+   "Entretien & vidange",
+   "Réparations garanties"
+  ],
+  "bakery": [
+   "Pain frais chaque matin",
+   "Gâteaux & pâtisseries",
+   "Commandes pour événements"
+  ],
+  "hotel": [
+   "Chambres confortables",
+   "Petit-déjeuner",
+   "Accueil chaleureux"
+  ],
+  "gym": [
+   "Équipements modernes",
+   "Coaching personnel",
+   "Abonnements flexibles"
+  ],
+  "florist": [
+   "Bouquets frais",
+   "Décoration d'événements",
+   "Commandes le jour même"
+  ],
+  "clothes": [
+   "Nouvelles collections",
+   "Tailles pour tous",
+   "Conseils personnalisés"
+  ],
+  "pharmacy": [
+   "Médicaments & conseils",
+   "Produits santé & beauté",
+   "Pharmaciens à votre écoute"
+  ],
+  "vet": [
+   "Contrôles & vaccins",
+   "Traitements & soins",
+   "Conseils aux propriétaires"
+  ],
+  "car_wash": [
+   "Lavage extérieur",
+   "Nettoyage intérieur",
+   "Detailing"
+  ]
+ },
+ "hook_reviews": "J'ai vu votre note de {rating}★ sur {reviews} avis Google. Vos clients vous apprécient clairement, mais lorsque de nouvelles personnes vous recherchent, il n'y a pas de site web pour vous présenter.",
+ "hook_platform": "Aujourd'hui, les nouveaux clients ne peuvent vous trouver que via {platform}. Ces sites prennent une commission et affichent vos concurrents juste à côté de vous ; votre propre site web garde le client chez vous.",
+ "hook_instagram": "Votre Instagram montre déjà votre travail ; un site web simple transformerait ces visiteurs en appels et réservations, et vous aiderait aussi à mieux ressortir sur Google.",
+ "hook_offer": "Votre site inclurait : {services}, un bouton d'appel direct et WhatsApp, une carte avec itinéraire et vos horaires d'ouverture.",
+ "short_reviews": "J'ai vu votre {rating}★ ({reviews} avis) sur Google.",
+ "short_platform": "J'ai remarqué que les clients ne peuvent vous réserver que via {platform}.",
+ "booking": "réservation en ligne",
+ "menu": "votre menu"
+}

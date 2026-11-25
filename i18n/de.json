@@ -1,0 +1,126 @@
+{
+ "services_title": "Was wir bieten",
+ "why_title": "Warum wir",
+ "why": [
+  "Freundliches, erfahrenes Team",
+  "Faire, transparente Preise",
+  "Leicht erreichbar: Anruf oder WhatsApp"
+ ],
+ "visit": "Besuchen Sie uns",
+ "services": {
+  "restaurant": [
+   "Täglich frische Gerichte",
+   "Familienfreundliches Essen",
+   "Takeaway & Gruppenbestellungen"
+  ],
+  "cafe": [
+   "Kaffee & Heißgetränke",
+   "Frühstück & Desserts",
+   "Gemütlicher Treffpunkt"
+  ],
+  "fast_food": [
+   "Schnelle Gerichte",
+   "Takeaway",
+   "Tägliche Angebote"
+  ],
+  "barber": [
+   "Haarschnitte & Styling",
+   "Bartpflege & Rasur",
+   "Haarpflege"
+  ],
+  "beauty": [
+   "Hautpflege",
+   "Nägel & Make-up",
+   "Persönliche Schönheitspflege"
+  ],
+  "dentist": [
+   "Vorsorge & Reinigung",
+   "Füllungen & Behandlungen",
+   "Ästhetische Zahnmedizin"
+  ],
+  "car_repair": [
+   "Diagnose",
+   "Wartung & Ölwechsel",
+   "Reparaturen mit Garantie"
+  ],
+  "bakery": [
+   "Frisches Brot jeden Morgen",
+   "Kuchen & Gebäck",
+   "Bestellungen für Events"
+  ],
+  "hotel": [
+   "Komfortable Zimmer",
+   "Frühstück",
+   "Freundliche Rezeption"
+  ],
+  "gym": [
+   "Moderne Geräte",
+   "Personal Training",
+   "Flexible Mitgliedschaften"
+  ],
+  "florist": [
+   "Frische Sträuße",
+   "Eventdekoration",
+   "Bestellungen am selben Tag"
+  ],
+  "clothes": [
+   "Neue Kollektionen",
+   "Größen für alle",
+   "Freundliche Beratung"
+  ],
+  "pharmacy": [
+   "Medikamente & Beratung",
+   "Gesundheits- & Beautyprodukte",
+   "Freundliche Apotheker"
+  ],
+  "vet": [
+   "Vorsorge & Impfungen",
+   "Behandlung & Pflege",
+   "Beratung für Tierhalter"
+  ],
+  "car_wash": [
+   "Außenwäsche",
+   "Innenreinigung",
+   "Detailing"
+  ]
+ },
+ "hook_reviews": "Ich habe Ihre {rating}★-Bewertung aus {reviews} Google-Rezensionen gesehen. Ihre Kunden mögen Sie offensichtlich, aber wenn neue Leute nach Ihnen suchen, gibt es keine Website, die sie Ihnen zeigt.",
+ "hook_platform": "Derzeit finden neue Kunden Sie nur über {platform}. Diese Seiten verlangen Provision und zeigen Ihre Konkurrenten direkt neben Ihnen; Ihre eigene Website bindet den Kunden an Sie.",
+ "hook_instagram": "Ihr Instagram zeigt bereits Ihre Arbeit; eine einfache Website würde diese Besucher in Anrufe und Buchungen verwandeln und Ihnen außerdem helfen, bei Google höher zu erscheinen.",
+ "hook_offer": "Ihre Website würde enthalten: {services}, einen direkten Anruf- und WhatsApp-Button, eine Karte mit Wegbeschreibung und Ihre Öffnungszeiten.",
+ "short_reviews": "Ich habe Ihre {rating}★ ({reviews} Bewertungen) auf Google gesehen.",
+ "short_platform": "Mir ist aufgefallen, dass Kunden Sie nur über {platform} buchen können.",
+ "booking": "Online-Buchung",
+ "menu": "Ihre Speisekarte",
+ "cat": {
+  "restaurant": "Restaurant",
+  "cafe": "Café",
+  "fast_food": "Imbiss",
+  "barber": "Friseur",
+  "beauty": "Kosmetikstudio",
+  "dentist": "Zahnarztpraxis",
+  "car_repair": "Autowerkstatt",
+  "bakery": "Bäckerei",
+  "hotel": "Hotel",
+  "gym": "Fitnessstudio",
+  "florist": "Blumenladen",
+  "clothes": "Modegeschäft",
+  "pharmacy": "Apotheke",
+  "vet": "Tierarztpraxis",
+  "car_wash": "Autowäsche"
+ },
+ "hero": "Ihr {cat} in {city}",
+ "sub": "Rufen Sie an, planen Sie Ihre Route oder schreiben Sie uns auf WhatsApp.",
+ "call": "Jetzt anrufen",
+ "wa": "WhatsApp",
+ "route": "Route",
+ "about": "Über uns",
+ "about_t": "{name} ist Ihr {cat} in {city}: guter Service, freundliches Team und faire Preise.",
+ "hours": "Öffnungszeiten",
+ "contact": "Kontakt",
+ "demo": "Diese Seite ist ein Beispielentwurf für {name}.",
+ "subject": "Kostenloser Website-Entwurf für {name}",
+ "email": "Guten Tag,\n\nich habe {name} online gesucht, aber keine Website gefunden. Die meisten Kunden suchen zuerst bei Google.\n\nIch habe einen kostenlosen Beispielentwurf erstellt (im Anhang): Telefon, WhatsApp, Route, Öffnungszeiten, für Handys optimiert.\n\nWenn er Ihnen gefällt, kann ich ihn in wenigen Tagen online stellen{price}. Kein Interesse? Antworten Sie einfach mit \"nein\", dann schreibe ich nicht mehr.\n\nMit freundlichen Grüßen\n{sender}\n{contact}",
+ "short": "Hallo! Ich habe eine kostenlose Beispiel-Website für {name} erstellt (Telefon, WhatsApp, Route, mobil). Möchten Sie sie sehen? — {sender}",
+ "price": " für {price}"
+}

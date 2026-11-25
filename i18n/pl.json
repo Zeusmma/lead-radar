@@ -1,0 +1,126 @@
+{
+ "cat": {
+  "restaurant": "restauracja",
+  "cafe": "kawiarnia",
+  "fast_food": "fast food",
+  "barber": "barber i salon fryzjerski",
+  "beauty": "salon kosmetyczny",
+  "dentist": "klinika stomatologiczna",
+  "car_repair": "warsztat samochodowy",
+  "bakery": "piekarnia",
+  "hotel": "hotel",
+  "gym": "siłownia",
+  "florist": "kwiaciarnia",
+  "clothes": "sklep odzieżowy",
+  "pharmacy": "apteka",
+  "vet": "klinika weterynaryjna",
+  "car_wash": "myjnia samochodowa"
+ },
+ "hero": "Twoja zaufana {cat} w {city}",
+ "sub": "Zadzwoń, znajdź nas lub napisz na WhatsAppie.",
+ "call": "Zadzwoń teraz",
+ "wa": "WhatsApp",
+ "route": "Wskazówki dojazdu",
+ "about": "O nas",
+ "about_t": "{name} · {cat} w mieście {city}. Dbamy o każdego klienta: dobra obsługa, miła atmosfera i uczciwe ceny.",
+ "hours": "Godziny otwarcia",
+ "contact": "Kontakt",
+ "demo": "Ta strona to przykładowy projekt przygotowany dla {name}.",
+ "subject": "Darmowy projekt strony dla {name}",
+ "email": "Dzień dobry, zespole {name},\n\nSzukałem Was w internecie, ale nie znalazłem strony. Większość klientów najpierw sprawdza Google, a firmy bez strony tracą ich na rzecz konkurencji.\n\nPrzygotowałem dla Was darmowy przykładowy projekt (w załączniku): telefon, WhatsApp, wskazówki dojazdu, godziny otwarcia, przyjazny dla telefonów.\n\nJeśli się spodoba, mogę go uruchomić w kilka dni{price}. Jeśli to nie interes, wystarczy odpowiedzieć \"nie\" i więcej nie napiszę.\n\nPozdrawiam,\n{sender}\n{contact}",
+ "short": "Dzień dobry! Przygotowałem darmową przykładową stronę dla {name} (telefon, WhatsApp, wskazówki dojazdu, przyjazna dla telefonów). Chcesz ją zobaczyć? Jeśli nie, to nic nie szkodzi. — {sender}",
+ "price": " za {price}",
+ "services_title": "Co oferujemy",
+ "why_title": "Dlaczego my",
+ "why": [
+  "Życzliwy, doświadczony zespół",
+  "Uczciwe, przejrzyste ceny",
+  "Łatwy kontakt: telefon lub WhatsApp"
+ ],
+ "visit": "Odwiedź nas",
+ "services": {
+  "restaurant": [
+   "Świeże dania każdego dnia",
+   "Jedzenie dla całej rodziny",
+   "Na wynos i zamówienia grupowe"
+  ],
+  "cafe": [
+   "Kawa i ciepłe napoje",
+   "Śniadania i desery",
+   "Przytulne miejsce na spotkania"
+  ],
+  "fast_food": [
+   "Szybkie dania",
+   "Na wynos",
+   "Codzienne promocje"
+  ],
+  "barber": [
+   "Strzyżenie i stylizacja",
+   "Trymowanie brody i golenie",
+   "Pielęgnacja włosów"
+  ],
+  "beauty": [
+   "Pielęgnacja skóry",
+   "Paznokcie i makijaż",
+   "Indywidualna pielęgnacja"
+  ],
+  "dentist": [
+   "Przeglądy i czyszczenie",
+   "Plomby i leczenie",
+   "Stomatologia estetyczna"
+  ],
+  "car_repair": [
+   "Diagnostyka",
+   "Przeglądy i wymiana oleju",
+   "Naprawy z gwarancją"
+  ],
+  "bakery": [
+   "Świeży chleb każdego rano",
+   "Torty i ciasta",
+   "Zamówienia na uroczystości"
+  ],
+  "hotel": [
+   "Komfortowe pokoje",
+   "Śniadanie",
+   "Życzliwa recepcja"
+  ],
+  "gym": [
+   "Nowoczesny sprzęt",
+   "Trening personalny",
+   "Elastyczne karnety"
+  ],
+  "florist": [
+   "Świeże bukiety",
+   "Dekoracje na uroczystości",
+   "Zamówienia na ten sam dzień"
+  ],
+  "clothes": [
+   "Nowe kolekcje",
+   "Rozmiary dla każdego",
+   "Życzliwe doradztwo"
+  ],
+  "pharmacy": [
+   "Leki i porady",
+   "Produkty zdrowotne i kosmetyki",
+   "Życzliwi farmaceuci"
+  ],
+  "vet": [
+   "Przeglądy i szczepienia",
+   "Leczenie i opieka",
+   "Porady dla właścicieli zwierząt"
+  ],
+  "car_wash": [
+   "Mycie zewnętrzne",
+   "Czyszczenie wnętrza",
+   "Detailing"
+  ]
+ },
+ "hook_reviews": "Widziałem Twoją ocenę {rating}★ z {reviews} opinii w Google. Klienci Cię cenią, ale gdy nowi ludzie Cię szukają, nie ma strony internetowej, która by ich przywitała.",
+ "hook_platform": "Obecnie nowi klienci mogą Cię znaleźć tylko przez {platform}. Te serwisy pobierają prowizję i pokazują Twoich konkurentów obok Ciebie; własna strona zatrzymuje klienta przy Tobie.",
+ "hook_instagram": "Twój Instagram już pokazuje Twoją pracę; prosta strona zamieni te odwiedziny w telefony i rezerwacje, a dodatkowo pomoże Ci wypaść wyżej w Google.",
+ "hook_offer": "Twoja strona zawierałaby: {services}, przycisk bezpośredniego połączenia i WhatsApp, mapę z nawigacją oraz godziny otwarcia.",
+ "short_reviews": "Widziałem Twoją ocenę {rating}★ ({reviews} opinii) w Google.",
+ "short_platform": "Zauważyłem, że klienci mogą Cię rezerwować tylko przez {platform}.",
+ "booking": "rezerwacja online",
+ "menu": "Twoje menu"
+}

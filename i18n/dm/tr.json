@@ -1,0 +1,52 @@
+{
+ "dm": "Merhaba {name}! {fact}\n\nBu yüzden sizin için ücretsiz bir örnek web sitesi hazırladım, ekte bulabilirsiniz. {gain}\n\nTam halini size göstermemin bir sakıncası olur mu? İlginizi çekmezse söylemeniz yeterli, bir daha yazmam.\n— {sender}",
+ "dm_reviews": "Google'da {reviews} yorumla {rating}★ puanınızı gördüm, ama sizi internette arayanlar size ait bir web sitesi bulamıyor.",
+ "dm_platform": "Yeni müşterilerin size yalnızca {platform} üzerinden randevu alabildiğini fark ettim; bu platform komisyon kesiyor.",
+ "dm_insta": "Instagram hesabınızda çok güzel işler var, ama sizi Google'da arayanlar size ait bir site bulamıyor.",
+ "dm_none": "Henüz kendi web sitenizin olmadığını fark ettim.",
+ "gain_platform": "Kendi sitenizle müşteriler komisyonsuz, doğrudan size randevu alır; Google da size yeni müşteriler getirir.",
+ "gain_default": "Böyle bir site, sizi Google'da arayan kişileri telefon, rezervasyon ve yeni müşteriye dönüştürür.",
+ "cat_x": {
+  "hair": "kuaför salonu",
+  "nails": "tırnak salonu"
+ },
+ "services_x": {
+  "hair": [
+   "Saç kesimi ve şekillendirme",
+   "Renklendirme ve röfle",
+   "Saç bakımı"
+  ],
+  "nails": [
+   "Manikür ve pedikür",
+   "Jel ve akrilik tırnaklar",
+   "Tırnak sanatı"
+  ]
+ },
+ "pdf_mobile": "Telefonda",
+ "pdf_full": "Sayfanın tamamı",
+ "pdf_sub": "Sizin için hazırlanan ücretsiz web sitesi konsepti",
+ "fu1": "Merhaba {name}! Birkaç gün önce sizin için hazırladığım ücretsiz örnek web sitesini görüp görmediğinizi sormak istedim. İşinize yararsa tam halini memnuniyetle gösteririm.\n— {sender}",
+ "fu2": "Merhaba {name}, sizden dönüş alamadığım için şu an bir web sitesinin öncelikli olmadığını düşünüyorum. Konuyu kendi tarafımda kapatmamın bir sakıncası olur mu? İleride tam halini görmek isterseniz buraya yazmanız yeterli.\n— {sender}",
+ "cat_trade": {
+  "plumber": "tesisatçı",
+  "electrician": "elektrikçi",
+  "builder": "tadilat ve inşaat firması"
+ },
+ "services_trade": {
+  "plumber": [
+   "Kaçak ve boru tamiri",
+   "Banyo ve mutfak tesisatı",
+   "Kombi ve ısıtma"
+  ],
+  "electrician": [
+   "Tesisat ve arıza",
+   "Aydınlatma",
+   "Kontrol ve raporlar"
+  ],
+  "builder": [
+   "Tadilat ve genişletme",
+   "Mutfak ve banyo",
+   "Ücretsiz keşif"
+  ]
+ }
+}

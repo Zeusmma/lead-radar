@@ -1,0 +1,52 @@
+{
+ "dm": "Dzień dobry, zespole {name}! {fact}\n\nPrzygotowałem dla Państwa bezpłatną próbną stronę internetową – znajduje się w załączniku. {gain}\n\nCzy to zły pomysł, gdybym pokazał Państwu pełną wersję? A jeśli to nie dla Państwa, proszę dać znać, a nie będę się więcej odzywać.\n— {sender}",
+ "dm_reviews": "Widziałem Państwa ocenę {rating}★ na podstawie {reviews} opinii w Google, ale nie ma strony internetowej dla osób, które Państwa szukają.",
+ "dm_platform": "Zauważyłem, że nowi klienci mogą rezerwować u Państwa wyłącznie przez {platform}, co wiąże się z prowizją.",
+ "dm_insta": "Państwa Instagram pokazuje świetną pracę, ale osoby, które znajdują Państwa w Google, nie mają gdzie trafić.",
+ "dm_none": "Zauważyłem, że nie mają Państwo jeszcze własnej strony internetowej.",
+ "gain_platform": "Z własną stroną klienci rezerwują bezpośrednio u Państwa, zatrzymują Państwo prowizję, a Google przysyła więcej nowych klientów.",
+ "gain_default": "Taka strona zamienia wyszukiwania w Google w telefony, rezerwacje i większą sprzedaż.",
+ "cat_x": {
+  "hair": "salon fryzjerski",
+  "nails": "salon paznokci"
+ },
+ "services_x": {
+  "hair": [
+   "Strzyżenie i stylizacja włosów",
+   "Koloryzacja i refleksy",
+   "Zabiegi pielęgnacyjne na włosy"
+  ],
+  "nails": [
+   "Manicure i pedicure",
+   "Paznokcie żelowe i akrylowe",
+   "Zdobienie paznokci"
+  ]
+ },
+ "pdf_mobile": "Na telefonie",
+ "pdf_full": "Cała strona",
+ "pdf_sub": "Bezpłatna koncepcja strony internetowej, stworzona dla Państwa",
+ "fu1": "Dzień dobry, {name}! Chciałem tylko zapytać, czy widzieli Państwo bezpłatny przykład strony, który przygotowałem kilka dni temu. Jeśli będzie przydatny, chętnie pokażę pełną wersję.\n— {sender}",
+ "fu2": "Dzień dobry, {name}. Ponieważ nie otrzymałem odpowiedzi, zakładam, że strona internetowa nie jest teraz dla Państwa priorytetem. Czy byłoby złym pomysłem, gdybym zamknął ten temat po mojej stronie? Jeśli zechcą Państwo zobaczyć pełną wersję później, wystarczy odpisać tutaj.\n— {sender}",
+ "cat_trade": {
+  "plumber": "hydraulik",
+  "electrician": "elektryk",
+  "builder": "firma remontowo-budowlana"
+ },
+ "services_trade": {
+  "plumber": [
+   "Naprawa przecieków i rur",
+   "Montaż łazienek i kuchni",
+   "Piece i ogrzewanie"
+  ],
+  "electrician": [
+   "Instalacje i naprawy",
+   "Oświetlenie",
+   "Przeglądy i pomiary"
+  ],
+  "builder": [
+   "Remonty i rozbudowy",
+   "Kuchnie i łazienki",
+   "Bezpłatna wycena"
+  ]
+ }
+}

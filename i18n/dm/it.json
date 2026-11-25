@@ -1,0 +1,52 @@
+{
+ "dm": "Buongiorno, {name}! {fact}\n\nVi ho preparato gratuitamente un esempio di sito web: lo trovate in allegato. {gain}\n\nSarebbe una cattiva idea se vi mostrassi la versione completa? Se invece non vi interessa, ditemelo pure e non vi scriverò più.\n— {sender}",
+ "dm_reviews": "Ho visto la vostra media di {rating}★ su {reviews} recensioni Google, ma chi vi cerca online non trova un vostro sito.",
+ "dm_platform": "Ho notato che i nuovi clienti possono prenotare solo tramite {platform}, che vi trattiene una commissione.",
+ "dm_insta": "Il vostro Instagram mostra un ottimo lavoro, ma chi vi cerca su Google non trova un vostro sito.",
+ "dm_none": "Ho notato che non avete ancora un sito web vostro.",
+ "gain_platform": "Con un sito vostro i clienti prenotano direttamente da voi, senza commissioni, e Google vi porta nuovi clienti.",
+ "gain_default": "Un sito così fa sì che chi vi cerca su Google vi chiami, prenoti e diventi cliente.",
+ "cat_x": {
+  "hair": "salone di parrucchiere",
+  "nails": "centro unghie"
+ },
+ "services_x": {
+  "hair": [
+   "Taglio e styling",
+   "Colore e meches",
+   "Trattamenti per capelli"
+  ],
+  "nails": [
+   "Manicure e pedicure",
+   "Unghie gel e acriliche",
+   "Nail art"
+  ]
+ },
+ "pdf_mobile": "Su un telefono",
+ "pdf_full": "L'intera pagina",
+ "pdf_sub": "Concept di sito web gratuito, creato per voi",
+ "fu1": "Buongiorno, {name}! Volevo solo sapere se avete visto l'esempio di sito gratuito che vi ho preparato qualche giorno fa. Se vi è utile, vi mostro volentieri la versione completa.\n— {sender}",
+ "fu2": "Buongiorno, {name}. Non avendo ricevuto risposta, immagino che un sito web non sia una priorità in questo momento. Sarebbe una cattiva idea se chiudessi la pratica da parte mia? Se in futuro voleste vedere la versione completa, basta rispondere qui.\n— {sender}",
+ "cat_trade": {
+  "plumber": "idraulico",
+  "electrician": "elettricista",
+  "builder": "impresa edile e ristrutturazioni"
+ },
+ "services_trade": {
+  "plumber": [
+   "Riparazione perdite e tubature",
+   "Installazione bagni e cucine",
+   "Caldaie e riscaldamento"
+  ],
+  "electrician": [
+   "Impianti e riparazioni",
+   "Installazione illuminazione",
+   "Verifiche e certificazioni"
+  ],
+  "builder": [
+   "Ristrutturazioni e ampliamenti",
+   "Cucine e bagni",
+   "Preventivi gratuiti"
+  ]
+ }
+}

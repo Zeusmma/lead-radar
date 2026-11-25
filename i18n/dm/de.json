@@ -1,0 +1,52 @@
+{
+ "dm": "Hallo {name}-Team! {fact}\n\nDeshalb habe ich Ihnen eine kostenlose Beispiel-Website erstellt – sie ist im Anhang. {gain}\n\nWäre es ein schlechter Gedanke, wenn ich Ihnen die vollständige Version zeige? Und falls das nichts für Sie ist, sagen Sie es mir einfach, dann melde ich mich nicht wieder.\n— {sender}",
+ "dm_reviews": "Ich habe Ihre {rating}★ aus {reviews} Google-Bewertungen gesehen, aber es gibt keine Website für Leute, die nach Ihnen suchen.",
+ "dm_platform": "Mir ist aufgefallen, dass neue Kunden Sie nur über {platform} buchen können, was eine Provision kostet.",
+ "dm_insta": "Ihr Instagram zeigt großartige Arbeit, aber wer Sie über Google findet, hat kein Ziel.",
+ "dm_none": "Mir ist aufgefallen, dass Sie noch keine eigene Website haben.",
+ "gain_platform": "Mit Ihrer eigenen Website buchen Kunden direkt bei Ihnen, Sie behalten die Provision und Google bringt Ihnen mehr neue Kunden.",
+ "gain_default": "Eine solche Website verwandelt Google-Suchen in Anrufe, Buchungen und mehr Verkäufe.",
+ "cat_x": {
+  "hair": "Friseursalon",
+  "nails": "Nagelstudio"
+ },
+ "services_x": {
+  "hair": [
+   "Haarschnitte & Styling",
+   "Farbe & Highlights",
+   "Haarpflegebehandlungen"
+  ],
+  "nails": [
+   "Maniküre & Pediküre",
+   "Gel- & Acrylnägel",
+   "Nageldesign"
+  ]
+ },
+ "pdf_mobile": "Auf dem Handy",
+ "pdf_full": "Die ganze Seite",
+ "pdf_sub": "Kostenloses Website-Konzept, für Sie erstellt",
+ "fu1": "Guten Tag {name}! Ich wollte kurz nachfragen, ob Sie die kostenlose Beispiel-Website gesehen haben, die ich vor ein paar Tagen für Sie erstellt habe. Wenn sie für Sie interessant ist, zeige ich Ihnen gern die vollständige Version.\n— {sender}",
+ "fu2": "Guten Tag {name}, da ich nichts von Ihnen gehört habe, gehe ich davon aus, dass eine Website gerade keine Priorität hat. Wäre es eine schlechte Idee, wenn ich das Thema auf meiner Seite abschließe? Falls Sie die vollständige Version später sehen möchten, antworten Sie einfach hier.\n— {sender}",
+ "cat_trade": {
+  "plumber": "Installateur",
+  "electrician": "Elektriker",
+  "builder": "Bau- und Renovierungsbetrieb"
+ },
+ "services_trade": {
+  "plumber": [
+   "Rohr- und Leckreparaturen",
+   "Bad- und Küchenmontage",
+   "Heizung und Kessel"
+  ],
+  "electrician": [
+   "Installation und Reparatur",
+   "Beleuchtung",
+   "Prüfungen und Nachweise"
+  ],
+  "builder": [
+   "Renovierung und Anbau",
+   "Küchen und Bäder",
+   "Kostenloses Angebot"
+  ]
+ }
+}

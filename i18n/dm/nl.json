@@ -1,0 +1,52 @@
+{
+ "dm": "Hallo {name}! {fact}\n\nIk heb daarom gratis een voorbeeldwebsite voor jullie gemaakt, die vinden jullie in de bijlage. {gain}\n\nZou het een slecht idee zijn als ik jullie de volledige versie laat zien? En als het niets voor jullie is, laat het me gerust weten, dan stuur ik geen berichten meer.\n— {sender}",
+ "dm_reviews": "Ik zag jullie {rating}★ uit {reviews} Google-reviews, maar wie jullie online zoekt, vindt geen eigen website.",
+ "dm_platform": "Ik zag dat nieuwe klanten alleen via {platform} bij jullie kunnen boeken, en daar betalen jullie commissie over.",
+ "dm_insta": "Jullie Instagram laat prachtig werk zien, maar wie jullie op Google zoekt, vindt geen eigen website.",
+ "dm_none": "Ik zag dat jullie nog geen eigen website hebben.",
+ "gain_platform": "Met een eigen website boeken klanten rechtstreeks bij jullie, zonder commissie, en brengt Google jullie nieuwe klanten.",
+ "gain_default": "Met zo'n website worden mensen die jullie op Google zoeken sneller bellers, boekingen en klanten.",
+ "cat_x": {
+  "hair": "kapsalon",
+  "nails": "nagelstudio"
+ },
+ "services_x": {
+  "hair": [
+   "Knippen & stylen",
+   "Kleuren & highlights",
+   "Haarbehandelingen"
+  ],
+  "nails": [
+   "Manicure & pedicure",
+   "Gel & acrylnagels",
+   "Nail art"
+  ]
+ },
+ "pdf_mobile": "Op een telefoon",
+ "pdf_full": "De hele pagina",
+ "pdf_sub": "Gratis websiteconcept, speciaal voor jullie gemaakt",
+ "fu1": "Hallo {name}! Ik wilde even checken of jullie de gratis voorbeeldwebsite hebben gezien die ik een paar dagen geleden voor jullie maakte. Als het nuttig is, laat ik jullie graag de volledige versie zien.\n— {sender}",
+ "fu2": "Hallo {name}, omdat ik niets heb gehoord, neem ik aan dat een website nu geen prioriteit is. Zou het een slecht idee zijn als ik dit van mijn kant afsluit? Willen jullie later de volledige versie zien, reageer dan gewoon hier.\n— {sender}",
+ "cat_trade": {
+  "plumber": "loodgieter",
+  "electrician": "elektricien",
+  "builder": "bouw- en renovatiebedrijf"
+ },
+ "services_trade": {
+  "plumber": [
+   "Lekkages en leidingen",
+   "Badkamers en keukens",
+   "Cv-ketels en verwarming"
+  ],
+  "electrician": [
+   "Installatie en storingen",
+   "Verlichting",
+   "Keuringen"
+  ],
+  "builder": [
+   "Verbouwingen en uitbouw",
+   "Keukens en badkamers",
+   "Gratis offerte"
+  ]
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "cat": {
+  "restaurant": "restaurante",
+  "cafe": "café",
+  "fast_food": "fast food",
+  "barber": "barbearia e salão de cabelo",
+  "beauty": "salão de beleza",
+  "dentist": "clínica dentária",
+  "car_repair": "oficina de reparação automóvel",
+  "bakery": "padaria",
+  "hotel": "hotel",
+  "gym": "ginásio",
+  "florist": "florista",
+  "clothes": "loja de roupa",
+  "pharmacy": "farmácia",
+  "vet": "clínica veterinária",
+  "car_wash": "lavagem de carros"
+ },
+ "hero": "O seu {cat} de confiança em {city}",
+ "sub": "Ligue-nos, veja como chegar ou envie mensagem no WhatsApp.",
+ "call": "Ligue agora",
+ "wa": "WhatsApp",
+ "route": "Como chegar",
+ "about": "Sobre nós",
+ "about_t": "{name} · {cat} em {city}. Cuidamos de cada cliente: bom serviço, simpatia e preços justos.",
+ "hours": "Horário de funcionamento",
+ "contact": "Contacto",
+ "demo": "Esta página é um design de exemplo feito para {name}.",
+ "subject": "Um design de site gratuito para {name}",
+ "email": "Olá equipa {name},\n\nProcurei-vos online mas não encontrei um site. A maioria dos clientes pesquisa primeiro no Google, e os negócios sem site perdem-nos para a concorrência.\n\nFiz um design de exemplo gratuito para vós (em anexo): telefone, WhatsApp, como chegar, horário, adaptado a telemóvel.\n\nSe gostarem, posso colocá-lo online em poucos dias{price}. Se não tiverem interesse, basta responder \"não\" e não volto a escrever.\n\nCumprimentos,\n{sender}\n{contact}",
+ "short": "Olá! Fiz um site de exemplo gratuito para {name} (telefone, WhatsApp, como chegar, adaptado a telemóvel). Gostariam de ver? Sem problema se não. — {sender}",
+ "price": " por {price}",
+ "services_title": "O que oferecemos",
+ "why_title": "Porque escolher-nos",
+ "why": [
+  "Equipa simpática e experiente",
+  "Preços justos e transparentes",
+  "Fácil de contactar: ligue ou WhatsApp"
+ ],
+ "visit": "Visite-nos",
+ "services": {
+  "restaurant": [
+   "Pratos frescos diários",
+   "Refeições em família",
+   "Takeaway e grupos"
+  ],
+  "cafe": [
+   "Café e bebidas quentes",
+   "Pequeno-almoço e sobremesas",
+   "Espaço acolhedor para encontros"
+  ],
+  "fast_food": [
+   "Refeições rápidas",
+   "Takeaway",
+   "Ofertas diárias"
+  ],
+  "barber": [
+   "Cortes e styling",
+   "Aparar e rapar barba",
+   "Cuidados de cabelo"
+  ],
+  "beauty": [
+   "Cuidados de pele",
+   "Unhas e maquilhagem",
+   "Cuidados de beleza personalizados"
+  ],
+  "dentist": [
+   "Consultas e limpezas",
+   "Restaurações e tratamentos",
+   "Dentisteria estética"
+  ],
+  "car_repair": [
+   "Diagnóstico",
+   "Manutenção e mudança de óleo",
+   "Reparações com garantia"
+  ],
+  "bakery": [
+   "Pão fresco todas as manhãs",
+   "Bolos e pastelaria",
+   "Encomendas para eventos"
+  ],
+  "hotel": [
+   "Quartos confortáveis",
+   "Pequeno-almoço",
+   "Recepção simpática"
+  ],
+  "gym": [
+   "Equipamento moderno",
+   "Treino personalizado",
+   "Mensalidades flexíveis"
+  ],
+  "florist": [
+   "Ramos frescos",
+   "Decoração de eventos",
+   "Encomendas no mesmo dia"
+  ],
+  "clothes": [
+   "Novas coleções",
+   "Tamanhos para todos",
+   "Aconselhamento simpático"
+  ],
+  "pharmacy": [
+   "Medicamentos e aconselhamento",
+   "Produtos de saúde e beleza",
+   "Farmacêuticos simpáticos"
+  ],
+  "vet": [
+   "Consultas e vacinas",
+   "Tratamento e cuidados",
+   "Aconselhamento para donos"
+  ],
+  "car_wash": [
+   "Lavagem exterior",
+   "Limpeza interior",
+   "Detalhamento"
+  ]
+ },
+ "hook_reviews": "Vi sua avaliação de {rating}★ com {reviews} avaliações no Google. Seus clientes claramente gostam de você, mas quando novas pessoas procuram, não há site para mostrar.",
+ "hook_platform": "Hoje novos clientes só encontram você pelo {platform}. Esses sites cobram comissão e mostram seus concorrentes ao lado; seu próprio site mantém o cliente com você.",
+ "hook_instagram": "Seu Instagram já mostra seu trabalho; um site simples transformaria esses visitantes em ligações e reservas, e também ajuda você a aparecer melhor no Google.",
+ "hook_offer": "Seu site incluiria: {services}, botão direto de ligação e WhatsApp, mapa com rotas e seu horário de funcionamento.",
+ "short_reviews": "Vi sua avaliação de {rating}★ ({reviews} avaliações) no Google.",
+ "short_platform": "Notei que os clientes só conseguem agendar pelo {platform}.",
+ "booking": "agendamento online",
+ "menu": "seu cardápio"
+}

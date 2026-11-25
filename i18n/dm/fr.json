@@ -1,0 +1,52 @@
+{
+ "dm": "Bonjour {name} ! {fact}\n\nJe vous ai donc préparé gratuitement une maquette de site, vous la trouverez en pièce jointe. {gain}\n\nEst-ce que ce serait une mauvaise idée que je vous montre la version complète ? Et si cela ne vous intéresse pas, dites-le-moi simplement, je ne vous écrirai plus.\n— {sender}",
+ "dm_reviews": "J'ai vu votre note de {rating}★ sur {reviews} avis Google, mais les personnes qui vous cherchent en ligne ne trouvent pas de site à votre nom.",
+ "dm_platform": "J'ai remarqué que les nouveaux clients ne peuvent réserver chez vous que via {platform}, qui prend une commission.",
+ "dm_insta": "Votre Instagram montre un très beau travail, mais ceux qui vous cherchent sur Google ne trouvent pas de site à votre nom.",
+ "dm_none": "J'ai remarqué que vous n'avez pas encore de site à vous.",
+ "gain_platform": "Avec votre propre site, les clients réservent directement chez vous, sans commission, et Google vous amène de nouveaux clients.",
+ "gain_default": "Un site comme celui-ci transforme les personnes qui vous cherchent sur Google en appels, en réservations et en clients.",
+ "cat_x": {
+  "hair": "salon de coiffure",
+  "nails": "salon de manucure"
+ },
+ "services_x": {
+  "hair": [
+   "Coupes & coiffage",
+   "Coloration & mèches",
+   "Soins capillaires"
+  ],
+  "nails": [
+   "Manucure & pédicure",
+   "Ongles en gel & acrylique",
+   "Nail art"
+  ]
+ },
+ "pdf_mobile": "Sur un téléphone",
+ "pdf_full": "La page entière",
+ "pdf_sub": "Concept de site web gratuit, créé pour vous",
+ "fu1": "Bonjour {name} ! Je voulais simplement savoir si vous aviez vu la maquette de site gratuite que je vous ai préparée il y a quelques jours. Si elle vous intéresse, je vous montre volontiers la version complète.\n— {sender}",
+ "fu2": "Bonjour {name}, sans nouvelles de votre part, je suppose qu'un site n'est pas une priorité pour vous en ce moment. Est-ce que ce serait une mauvaise idée que je clôture ce dossier de mon côté ? Si vous souhaitez voir la version complète plus tard, répondez simplement ici.\n— {sender}",
+ "cat_trade": {
+  "plumber": "plombier",
+  "electrician": "électricien",
+  "builder": "entreprise de rénovation"
+ },
+ "services_trade": {
+  "plumber": [
+   "Réparation de fuites et canalisations",
+   "Installation de salles de bain et cuisines",
+   "Chaudières et chauffage"
+  ],
+  "electrician": [
+   "Installation et dépannage",
+   "Éclairage",
+   "Mise en conformité"
+  ],
+  "builder": [
+   "Rénovation et extension",
+   "Cuisines et salles de bain",
+   "Devis gratuit"
+  ]
+ }
+}

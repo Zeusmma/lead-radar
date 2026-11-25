@@ -1,0 +1,17 @@
+name: test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Self-test (stdlib only, no Playwright or Chrome needed)
+        run: python radar.py --selftest
+      - name: Syntax check
+        run: python -m py_compile radar.py browser.py pdfmaker.py scripts/seed_demo_data.py
+      - name: Shell syntax check
+        run: |
+          for f in scripts/*.sh; do bash -n "$f"; done

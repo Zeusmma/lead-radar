@@ -1,0 +1,4 @@
+# Browser tasks only (website check, WhatsApp/Instagram/Gmail sending, PDF brochures).
+# The self-test and the web UI need nothing beyond the Python standard library.
+playwright>=1.40,<2
+tzdata; platform_system == "Windows"

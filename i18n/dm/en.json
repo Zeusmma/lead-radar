@@ -1,0 +1,52 @@
+{
+ "dm": "Hi {name} team! {fact}\n\nSo I made you a free sample website, it's in the attachment. {gain}\n\nWould it be a bad idea if I showed you the full version? And if it's not for you, just tell me and I won't write again.\n— {sender}",
+ "dm_reviews": "I saw your {rating}★ from {reviews} Google reviews, but there is no website for people who search for you.",
+ "dm_platform": "I noticed new clients can only book you through {platform}, which takes a commission.",
+ "dm_insta": "Your Instagram shows great work, but people who find you on Google have nowhere to land.",
+ "dm_none": "I noticed you don't have your own website yet.",
+ "gain_platform": "With your own site, clients book you directly, you keep the commission, and Google sends you more new customers.",
+ "gain_default": "A site like this turns Google searches into calls, bookings and more sales.",
+ "cat_x": {
+  "hair": "hair salon",
+  "nails": "nail salon"
+ },
+ "services_x": {
+  "hair": [
+   "Haircuts & styling",
+   "Colour & highlights",
+   "Hair treatments"
+  ],
+  "nails": [
+   "Manicure & pedicure",
+   "Gel & acrylic nails",
+   "Nail art"
+  ]
+ },
+ "pdf_mobile": "On a phone",
+ "pdf_full": "The whole page",
+ "pdf_sub": "Free website concept, made for you",
+ "fu1": "Hi {name}! Just checking you saw the free sample website I made for you a few days ago. Happy to show you the full version if it's useful.\n— {sender}",
+ "fu2": "Hi {name}, I haven't heard back, so I'll assume a website isn't a priority for you right now. Would it be a bad idea if I closed this on my side? If you'd like to see the full version later, just reply here.\n— {sender}",
+ "cat_trade": {
+  "plumber": "plumber",
+  "electrician": "electrician",
+  "builder": "builder & renovation company"
+ },
+ "services_trade": {
+  "plumber": [
+   "Leak & pipe repairs",
+   "Bathroom & kitchen installation",
+   "Boilers & heating"
+  ],
+  "electrician": [
+   "Wiring & repairs",
+   "Lighting installation",
+   "Safety checks & certificates"
+  ],
+  "builder": [
+   "Renovations & extensions",
+   "Kitchens & bathrooms",
+   "Free quotes"
+  ]
+ }
+}
